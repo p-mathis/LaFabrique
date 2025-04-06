@@ -1,0 +1,49 @@
+<!-- Traitement d'une image qui est dans la page  -->
+<!-- voir https://mijndertstuij.nl/posts/hugo-responsive-images/ -->
+<!-- Voir https://www.brycewray.com/posts/2022/06/responsive-optimized-images-hugo/ -->
+<!-- Voir https://www.markusantonwolf.com/blog/guide-for-different-ways-to-access-your-image-resources/ -->
+
+
+
+{{ $respSizes := slice "320" "640" "960" "1280" "1600" "1920" }}
+
+{{ $src := .Page.Resources.GetMatch ( .Get "src" )}}
+
+{{ $alt := .Get "alt" }}
+{{ $divClass := "" }}
+{{ $imgClass := "w-full h-auto " }}
+{{ $dataSzes := "(min-width: 1024px) 100vw, 50vw" }}
+{{ $actualImg := $src.Resize "640x jpg" }}
+<picture>
+  <source
+    type="image/webp"
+    srcset="
+      {{- with $respSizes -}}
+        {{- range $i, $e := . -}}
+        {{- if ge $src.Width . -}}
+          {{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " webp") ).RelPermalink }} {{ . }}w
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}"
+    sizes="{{ $dataSzes }}"
+  />
+  <source
+    type="image/jpeg"
+    srcset="
+      {{- with $respSizes -}}
+        {{- range $i, $e := . -}}
+          {{- if ge $src.Width . -}}
+            {{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " jpg") ).RelPermalink }} {{ . }}w
+          {{- end -}}
+      {{- end -}}
+    {{- end -}}"\
+    sizes="{{ $dataSzes }}"
+  />
+  <img class="{{ $imgClass }}"
+    src="{{ $actualImg.RelPermalink }}"
+    width="{{ $src.Width }}"
+    height="{{ $src.Height }}"
+    alt="{{ $alt }}"
+    loading="lazy"
+  />
+</picture>

@@ -1,0 +1,11 @@
+baseURL = ''
+languageCode = 'fr-fr'
+title = 'Ma Fabrique'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[outputFormats]
+  [outputFormats.html]

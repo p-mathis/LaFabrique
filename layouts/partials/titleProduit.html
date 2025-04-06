@@ -1,0 +1,106 @@
+{{- $imgBase := "images/" -}}
+{{- $srcString := (printf "%s%s" $imgBase .Page.Params.photo ) -}}
+{{ $src := resources.Get $srcString }}
+{{ $image_title := .Page.Params.photoTitle }}
+{{ $image_comment := .Page.Params.photoComment }}
+{{ $alt := .Page.Params.alt }}
+
+
+<!-- le html pour resize images Déclaration variables-->
+{{ $respSizes := slice "320" "640" "960" "1280" "1600" "1920" }}
+{{ $divClass := "" }}
+{{ $imgClass := "w-full h-auto " }}
+{{ $dataSzes := "(min-width: 1024px) 100vw, 50vw" }}
+{{ $actualImg := $src.Resize "640x jpg" }}
+
+<!-- fin du html pour les images Déclaration variables-->
+
+<div class="hidden md:grid grid-cols-5 font-bold text-center justify-center items-center bg-mycolor-700">
+    
+    <div class="col-span-3">
+        <h1 class="text-mywhite uppercase">{{ $image_title }}<br><br><span class="italic md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">{{ $image_comment }}</span></h1>
+    </div>
+    <div class="col-span-2">
+        <!-- <img class="w-full h-auto " src=" {{ $src }}" alt="{{ $alt }}" loading="lazy" /> -->
+        <!-- html picture pour resize image -->
+        <picture class="w-full h-auto ">
+            <source
+              type="image/webp"
+              srcset="
+                {{- with $respSizes -}}
+                  {{- range $i, $e := . -}}
+                  {{- if ge $src.Width . -}}
+                    {{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " webp") ).RelPermalink }} {{ . }}w
+                  {{- end -}}
+                {{- end -}}
+              {{- end -}}"
+              sizes="{{ $dataSzes }}"
+            />
+            <source
+              type="image/jpeg"
+              srcset="
+                {{- with $respSizes -}}
+                  {{- range $i, $e := . -}}
+                    {{- if ge $src.Width . -}}
+                      {{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " jpg") ).RelPermalink }} {{ . }}w
+                    {{- end -}}
+                {{- end -}}
+              {{- end -}}"\
+              sizes="{{ $dataSzes }}"
+            />
+            <img class="{{ $imgClass }}"
+              src="{{ $actualImg.RelPermalink }}"
+              width="{{ $src.Width }}"
+              height="{{ $src.Height }}"
+              alt="{{ $alt }}"
+              loading="lazy"
+            />
+          </picture>
+        <!-- fin du html picture -->
+
+
+    </div>        
+</div>
+<div class="md:hidden bg-mycolor-700 font-bold text-white text-center ">
+    <!-- <img class="w-full h-auto " src=" {{ $src }}" alt="{{ $alt }}" loading="lazy" /> -->
+    <!-- html picture pour resize image -->
+    <picture class="w-full h-auto ">
+        <source
+            type="image/webp"
+            srcset="
+            {{- with $respSizes -}}
+                {{- range $i, $e := . -}}
+                {{- if ge $src.Width . -}}
+                {{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " webp") ).RelPermalink }} {{ . }}w
+                {{- end -}}
+            {{- end -}}
+            {{- end -}}"
+            sizes="{{ $dataSzes }}"
+        />
+        <source
+            type="image/jpeg"
+            srcset="
+            {{- with $respSizes -}}
+                {{- range $i, $e := . -}}
+                {{- if ge $src.Width . -}}
+                    {{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " jpg") ).RelPermalink }} {{ . }}w
+                {{- end -}}
+            {{- end -}}
+            {{- end -}}"\
+            sizes="{{ $dataSzes }}"
+        />
+        <img class="{{ $imgClass }}"
+            src="{{ $actualImg.RelPermalink }}"
+            width="{{ $src.Width }}"
+            height="{{ $src.Height }}"
+            alt="{{ $alt }}"
+            loading="lazy"
+        />
+        </picture>
+    <!-- fin du html picture -->
+
+
+    
+ 
+    <h1 class="py-4 text-xl text-mywhite uppercase" style="letter-spacing: .3rem;">{{ $image_title }}<br><span class="text-base italic" style="letter-spacing: .15rem;">{{ $image_comment }}</span></h1>
+</div>

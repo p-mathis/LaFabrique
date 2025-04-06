@@ -1,0 +1,47 @@
+<!-- Traitement d'une image qui est dans assets/images  -->
+<!-- voir https://mijndertstuij.nl/posts/hugo-responsive-images/ -->
+<!-- Voir https://www.brycewray.com/posts/2022/06/responsive-optimized-images-hugo/ -->
+<!-- Voir https://www.markusantonwolf.com/blog/guide-for-different-ways-to-access-your-image-resources/ -->
+<!-- Attention : ici il faut dans $src metre print f"%s%s" et non pas "%s" -->
+
+{{- $respSizes := slice "320" "640" "960" "1280" "1600" "1920" -}}
+
+{{- $src := .Scratch.Get "src" -}}
+{{- $alt := .Scratch.Get "alt" -}}
+{{- $divClass := "" -}}{{/* Init'g */}}
+{{- $imgClass := "w-full h-auto animate-fade" -}}
+{{- $dataSzes := "(min-width: 1024px) 100vw, 50vw" -}}
+{{- $actualImg := $src.Resize "640x jpg" -}}
+<picture>
+  <source
+    type="image/webp"
+    srcset="
+      {{- with $respSizes -}}
+        {{- range $i, $e := . -}}
+        {{- if ge $src.Width . -}}
+          {{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " webp") ).RelPermalink }} {{ . }}w
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}"
+    sizes="{{ $dataSzes }}"
+  />
+  <source
+    type="image/jpeg"
+    srcset="
+      {{- with $respSizes -}}
+        {{- range $i, $e := . -}}
+          {{- if ge $src.Width . -}}
+            {{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " jpg") ).RelPermalink }} {{ . }}w
+          {{- end -}}
+      {{- end -}}
+    {{- end -}}"\
+    sizes="{{ $dataSzes }}"
+  />
+  <img class="{{ $imgClass }}"
+    src="{{ $actualImg.RelPermalink }}"
+    width="{{ $src.Width }}"
+    height="{{ $src.Height }}"
+    alt="{{ $alt }}"
+    loading="lazy"
+  />
+</picture>

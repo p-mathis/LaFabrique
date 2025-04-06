@@ -1,0 +1,40 @@
+{{ define "main" }}
+
+  {{ $image_title := .Page.Params.photoTitle }}
+  {{ $image_comment := .Page.Params.photoComment }}
+  
+  <!-- titre et photo écran md et plus -->
+  <div class="hidden md:grid grid-cols-5 font-bold text-center justify-center items-center bg-mycolor-700">
+    
+    <div class="col-span-3">
+      <h1 class="text-mywhite uppercase">{{ $image_title }}<br><br><span class="italic md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">{{ $image_comment }}</span></h1>
+    </div>
+    <div class="col-span-2">
+      {{ partial "imageAssets.html" . }}
+    </div>        
+  </div>
+  <!-- titre et photo écran sm -->
+  <div class="md:hidden bg-mycolor-700 font-bold text-white text-center ">
+    {{ partial "imageAssets.html" . }}
+    <h1 class="py-4 text-xl text-mywhite uppercase" style="letter-spacing: .3rem;">{{ $image_title }}<br><span class="text-base italic" style="letter-spacing: .15rem;">{{ $image_comment }}</span></h1>
+  </div>
+
+  {{ .Content }}
+
+  {{ range .Pages.ByTitle }}
+    {{ $image_title := .Page.Params.photoTitle }}
+    {{ $image_comment := .Page.Params.photoComment }}
+    {{ $description := .Page.Params.description }}
+    <div class="grid grid-cols-6 gap-x-2 font-bold text-center justify-center items-center bg-mycolor-400 py-2 text-mycolor-700 ">
+      <div class="col-span-1">
+        {{ partial "imageAssets.html" . }}
+      </div>
+      <div class="col-span-2">
+        <h2 class="uppercase text-left ">{{ .Title }}</h2>
+      </div>
+      <div class="col-span-3">
+        <p class="">{{ $description | markdownify }}</p>
+      </div>
+    </div>
+  {{ end }}
+{{ end }}
