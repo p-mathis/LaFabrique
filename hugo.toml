@@ -1,4 +1,4 @@
-baseURL = ''
+baseURL = 'https://lafabrique.netlify.app/'
 languageCode = 'fr-fr'
 title = 'Ma Fabrique'
 
