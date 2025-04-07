@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Accueil on Ma Fabrique</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content in Accueil on Ma Fabrique</description>
+    <generator>Hugo</generator>
+    <language>fr-fr</language>
+    <lastBuildDate>Fri, 21 Mar 2025 19:42:27 +0100</lastBuildDate>
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lingettes</title>
+      <link>//localhost:1313/produits/nettoyage/lingette/</link>
+      <pubDate>Fri, 21 Mar 2025 19:42:27 +0100</pubDate>
+      <guid>//localhost:1313/produits/nettoyage/lingette/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;p&gt;Pellentesque auctor sed diam nec pretium. Morbi auctor risus quam, in ultrices urna rutrum nec.&lt;/p&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;p&gt;Cras pharetra et odio in faucibus.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bassine</title>
+      <link>//localhost:1313/produits/nettoyage/bassine/</link>
+      <pubDate>Fri, 21 Mar 2025 19:41:55 +0100</pubDate>
+      <guid>//localhost:1313/produits/nettoyage/bassine/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;p&gt;Pellentesque luctus lacus a pulvinar faucibus.&lt;/p&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;p&gt;Suspendisse tempor sodales lacus vestibulum sollicitudin.&lt;br&gt;&#xA;Pellentesque euismod lorem commodo lacus venenatis, id aliquet justo ullamcorper.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Seau 10 Litres</title>
+      <link>//localhost:1313/produits/nettoyage/seau-10-litres/</link>
+      <pubDate>Fri, 21 Mar 2025 19:41:40 +0100</pubDate>
+      <guid>//localhost:1313/produits/nettoyage/seau-10-litres/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;p&gt;Curabitur congue scelerisque lacus at tempor. Duis vitae risus et velit maximus ullamcorper nec a sapien. Praesent fermentum ante ac placerat condimentum. Suspendisse potenti.&lt;/p&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;p&gt;Suspendisse potenti.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Duis posuere erat quis libero porta, ac euismod eros mollis.&lt;/li&gt;&#xA;&lt;li&gt;Nulla facilisis nisl et lacus consequat, a auctor erat finibus.&lt;/li&gt;&#xA;&lt;li&gt;Interdum et malesuada fames ac ante ipsum primis in faucibus.&lt;/li&gt;&#xA;&lt;li&gt;Phasellus faucibus odio vel volutpat dapibus.&#xA;Ut dignissim nec turpis nec bibendum.&lt;br&gt;&#xA;Integer vel libero dolor. Mauris vulputate metus quis justo efficitur condimentum. Donec placerat diam quis semper convallis.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>seau 5 litres</title>
+      <link>//localhost:1313/produits/nettoyage/seau-5-litres/</link>
+      <pubDate>Fri, 21 Mar 2025 19:41:11 +0100</pubDate>
+      <guid>//localhost:1313/produits/nettoyage/seau-5-litres/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;p&gt;Cras pharetra et odio in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed eu lacus nunc. Vestibulum posuere eu eros a semper.&lt;/p&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;p&gt;Sed efficitur, est vel vestibulum ullamcorper, leo ligula blandit turpis, ut dapibus elit elit quis diam. Sed suscipit, lorem ut mollis porttitor, orci libero euismod purus, quis pulvinar eros velit eget sem. Ut in viverra lacus. Vestibulum dictum vitae sapien id varius. Nullam ut urna sit amet neque aliquam cursus.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pinceau plat</title>
+      <link>//localhost:1313/produits/peinture/pinceau-plat/</link>
+      <pubDate>Fri, 21 Mar 2025 19:40:36 +0100</pubDate>
+      <guid>//localhost:1313/produits/peinture/pinceau-plat/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Aliquam at semper lectus.&lt;/li&gt;&#xA;&lt;li&gt;Nulla hendrerit interdum augue, eu elementum sem accumsan vitae.&lt;/li&gt;&#xA;&lt;li&gt;Praesent mollis turpis at diam vehicula finibus.&lt;/li&gt;&#xA;&lt;li&gt;Sed ex lectus, convallis id dictum quis, porttitor ac erat.&lt;/li&gt;&#xA;&lt;li&gt;Phasellus euismod nibh ut odio ullamcorper, at malesuada nunc ultricies.&lt;/li&gt;&#xA;&lt;li&gt;Aliquam vitae ultrices nisi. Vivamus velit ex, fermentum eget sagittis et, iaculis eu lacus.&lt;/li&gt;&#xA;&lt;li&gt;Pellentesque interdum pretium commodo.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Pinceau Rond</title>
+      <link>//localhost:1313/produits/peinture/pinceau-rond/</link>
+      <pubDate>Fri, 21 Mar 2025 19:40:23 +0100</pubDate>
+      <guid>//localhost:1313/produits/peinture/pinceau-rond/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;p&gt;Aenean id vehicula&lt;/p&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;p&gt;Vestibulum vehicula&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Peinture acrylique</title>
+      <link>//localhost:1313/produits/peinture/peinture-acrylique/</link>
+      <pubDate>Fri, 21 Mar 2025 19:40:00 +0100</pubDate>
+      <guid>//localhost:1313/produits/peinture/peinture-acrylique/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;p&gt;Cras pharetra et odio in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.&lt;br&gt;&#xA;Sed eu lacus nunc.&lt;/p&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;p&gt;Aliquam felis massa, ornare ac nisl !&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Peinture à l&#39;eau</title>
+      <link>//localhost:1313/produits/peinture/peinture-eau/</link>
+      <pubDate>Fri, 21 Mar 2025 19:39:44 +0100</pubDate>
+      <guid>//localhost:1313/produits/peinture/peinture-eau/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Nam ultrices auctor lectus at fermentum.&lt;/li&gt;&#xA;&lt;li&gt;Mauris venenatis rutrum lacus, ac posuere nisi accumsan a.&lt;/li&gt;&#xA;&lt;li&gt;Mauris quis nulla ac mauris tristique malesuada non a mi.&#xA;Duis consequat posuere semper.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;p&gt;Praesent tempus et neque eget finibus.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Clou Tête d&#39;Homme</title>
+      <link>//localhost:1313/produits/visserie/clou-tete-homme/</link>
+      <pubDate>Fri, 21 Mar 2025 19:38:50 +0100</pubDate>
+      <guid>//localhost:1313/produits/visserie/clou-tete-homme/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;p&gt;Ut in eros porta, viverra est sit amet, commodo mi.&lt;br&gt;&#xA;Nunc in semper lorem. Etiam eu vestibulum elit.&lt;/p&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;p&gt;Curabitur vel vestibulum diam !&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vis perforante</title>
+      <link>//localhost:1313/produits/visserie/vis-perforante/</link>
+      <pubDate>Fri, 21 Mar 2025 19:38:19 +0100</pubDate>
+      <guid>//localhost:1313/produits/visserie/vis-perforante/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;p&gt;Sed vulputate leo ut sem interdum, et faucibus turpis finibus. Suspendisse potenti. Duis posuere erat quis libero porta, ac euismod eros mollis.&lt;/p&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;p&gt;Curabitur congue scelerisque lacus at tempor.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vis Métal</title>
+      <link>//localhost:1313/produits/visserie/vis-metal/</link>
+      <pubDate>Fri, 21 Mar 2025 19:37:50 +0100</pubDate>
+      <guid>//localhost:1313/produits/visserie/vis-metal/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet !&lt;/p&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;p&gt;In id diam quam !&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vis bois</title>
+      <link>//localhost:1313/produits/visserie/vis-bois/</link>
+      <pubDate>Fri, 21 Mar 2025 19:37:34 +0100</pubDate>
+      <guid>//localhost:1313/produits/visserie/vis-bois/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;p&gt;Aliquam faucibus, neque sed consectetur rutrum&lt;/p&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;p&gt;Duis ac ipsum laoreet ligula aliquet sagittis.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Clou</title>
+      <link>//localhost:1313/produits/visserie/clou/</link>
+      <pubDate>Fri, 21 Mar 2025 19:37:15 +0100</pubDate>
+      <guid>//localhost:1313/produits/visserie/clou/</guid>
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;</description>
+    </item>
+    <item>
+      <title>Notre Histoire !</title>
+      <link>//localhost:1313/histoire/</link>
+      <pubDate>Tue, 18 Mar 2025 23:26:01 +0100</pubDate>
+      <guid>//localhost:1313/histoire/</guid>
+      <description>&lt;p&gt;&#xA;&lt;div class=&#34;grid grid-cols-1 md:divide-y divide-red-400 py-4&#34;&gt;&#xA;&#xA;    &lt;div&gt;&lt;/div&gt;&#xA;    &lt;div&gt;&lt;/div&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&#xA;    &#xA;&#xA;&lt;div class=&#34;border border-gray-400 p-2 md:px-24 bg-gradient-to-r from-mycolor-200 via-mycolor-300 to-mycolor-200 text-left text-mycolor-900&#34;&gt;&#xA;    &#xA;    &lt;h2 id=&#34;une-belle-histoire-&#34;&gt;Une belle histoire !&lt;/h2&gt;&#xA;&lt;p&gt;Une quincaillerie au long passé, qui vous propose :&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;des clous&lt;/li&gt;&#xA;&lt;li&gt;des vis&lt;/li&gt;&#xA;&lt;li&gt;de la peinture&lt;/li&gt;&#xA;&lt;/ul&gt; &#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;div class=&#34;grid grid-cols-1 md:divide-y divide-red-400 py-4&#34;&gt;&#xA;&#xA;    &lt;div&gt;&lt;/div&gt;&#xA;    &lt;div&gt;&lt;/div&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&#xA;    &#xA;&lt;/p&gt;&#xA;&lt;p&gt;&lt;div class=&#34;border border-gray-400 p-2 md:px-24 bg-gradient-to-r from-mycolor-300 via-mycolor-200 to-mycolor-300 text-left text-mycolor-900&#34;&gt;&#xA;    &#xA;         &lt;h2 id=&#34;un-lien-internet&#34;&gt;Un lien internet&lt;/h2&gt;&#xA;&lt;p&gt;Consultez la page &lt;a href=&#34;https://www.federation-quincaillerie.fr/la-profession/histoire-de-la-quincaillerie/&#34;&gt;histoire de la Quincaillerie&lt;/a&gt;&lt;/p&gt; &#xA;    &#xA;&lt;/div&gt;&#xA;&#xA;&lt;div class=&#34;grid grid-cols-1 md:divide-y divide-red-400 py-4&#34;&gt;&#xA;&#xA;    &lt;div&gt;&lt;/div&gt;&#xA;    &lt;div&gt;&lt;/div&gt;&#xA;&#xA;&lt;/div&gt;&#xA;&#xA;&#xA;    &#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&lt;picture&gt;&#xA;  &lt;source&#xA;    type=&#34;image/webp&#34;&#xA;    srcset=&#34;//localhost:1313/histoire/histoire-quincaillerie_hu_3164d36a7bd7c4d4.webp 320w, //localhost:1313/histoire/histoire-quincaillerie_hu_e416cb6510c6380d.webp 640w, //localhost:1313/histoire/histoire-quincaillerie_hu_9e95fe77591d29d3.webp 960w&#34;&#xA;    sizes=&#34;(min-width: 1024px) 100vw, 50vw&#34;&#xA;  /&gt;&#xA;  &lt;source&#xA;    type=&#34;image/jpeg&#34;&#xA;    srcset=&#34;//localhost:1313/histoire/histoire-quincaillerie_hu_3037fbc238627829.jpg 320w, //localhost:1313/histoire/histoire-quincaillerie_hu_f8b46b9538c65be3.jpg 640w, //localhost:1313/histoire/histoire-quincaillerie_hu_9096ed4f95c833d2.jpg 960w&#34;\&#xA;    sizes=&#34;(min-width: 1024px) 100vw, 50vw&#34;&#xA;  /&gt;&#xA;  &lt;img class=&#34;w-full h-auto &#34;&#xA;    src=&#34;//localhost:1313/histoire/histoire-quincaillerie_hu_f8b46b9538c65be3.jpg&#34;&#xA;    width=&#34;1200&#34;&#xA;    height=&#34;630&#34;&#xA;    alt=&#34;l&amp;#39;intérieur d&amp;#39;une quincaillerie&#34;&#xA;    loading=&#34;lazy&#34;&#xA;  /&gt;&#xA;&lt;/picture&gt;&#xA;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
