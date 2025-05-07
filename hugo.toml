@@ -1,6 +1,7 @@
 baseURL = 'https://lafabrique.netlify.app/'
 languageCode = 'fr-fr'
 title = 'Ma Fabrique'
+enableRobotsTXT = true
 
 [markup]
   [markup.goldmark]
@@ -63,3 +64,4 @@ home = ["HTML", "RSS", "JSON"]
     mediaType = "application/json"
     baseName = "index" 
     isPlainText = true
+
