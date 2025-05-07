@@ -4,10 +4,12 @@
 <!-- Voir https://www.markusantonwolf.com/blog/guide-for-different-ways-to-access-your-image-resources/ -->
 <!-- Attention : ici il faut dans $src metre print f"%s%s" et non pas "%s" -->
 
-{{- $respSizes := slice "320" "640" "960" "1280" "1600" "1920" -}}
+
 {{- $imgBase := "images/" -}}
 {{- $src := resources.GetMatch (printf "%s%s" $imgBase (.Get "src")) -}}
 {{- $alt := .Get "alt" -}}
+
+{{- $respSizes := slice "320" "640" "960" "1280" "1600" "1920" -}}
 {{- $divClass := "" -}}{{/* Init'g */}}
 {{- $imgClass := "w-full h-auto animate-fade" -}}
 {{- $dataSzes := "(min-width: 1024px) 100vw, 50vw" -}}

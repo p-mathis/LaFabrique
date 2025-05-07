@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Peinture on Ma Fabrique</title>
-    <link>//localhost:1313/produits/peinture/</link>
+    <link>http://localhost:1313/produits/peinture/</link>
     <description>Recent content in Peinture on Ma Fabrique</description>
     <generator>Hugo</generator>
     <language>fr-fr</language>
     <lastBuildDate>Fri, 21 Mar 2025 19:40:36 +0100</lastBuildDate>
-    <atom:link href="//localhost:1313/produits/peinture/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/produits/peinture/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Pinceau plat</title>
-      <link>//localhost:1313/produits/peinture/pinceau-plat/</link>
+      <link>http://localhost:1313/produits/peinture/pinceau-plat/</link>
       <pubDate>Fri, 21 Mar 2025 19:40:36 +0100</pubDate>
-      <guid>//localhost:1313/produits/peinture/pinceau-plat/</guid>
-      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Aliquam at semper lectus.&lt;/li&gt;&#xA;&lt;li&gt;Nulla hendrerit interdum augue, eu elementum sem accumsan vitae.&lt;/li&gt;&#xA;&lt;li&gt;Praesent mollis turpis at diam vehicula finibus.&lt;/li&gt;&#xA;&lt;li&gt;Sed ex lectus, convallis id dictum quis, porttitor ac erat.&lt;/li&gt;&#xA;&lt;li&gt;Phasellus euismod nibh ut odio ullamcorper, at malesuada nunc ultricies.&lt;/li&gt;&#xA;&lt;li&gt;Aliquam vitae ultrices nisi. Vivamus velit ex, fermentum eget sagittis et, iaculis eu lacus.&lt;/li&gt;&#xA;&lt;li&gt;Pellentesque interdum pretium commodo.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <guid>http://localhost:1313/produits/peinture/pinceau-plat/</guid>
+      <description>&lt;h2 id=&#34;notre-produit&#34;&gt;Notre Produit&lt;/h2&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;&#xA;&lt;h2 id=&#34;nos-commentaires&#34;&gt;Nos Commentaires&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Aliquam at semper lectus.&lt;/li&gt;&#xA;&lt;li&gt;Nulla hendrerit interdum augue, eu elementum sem accumsan vitae.&lt;/li&gt;&#xA;&lt;li&gt;Praesent mollis turpis at diam vehicula finibus.&lt;/li&gt;&#xA;&lt;li&gt;Sed ex lectus, convallis id dictum quis, porttitor ac erat.&lt;/li&gt;&#xA;&lt;li&gt;Phasellus euismod nibh ut odio ullamcorper, at malesuada nunc ultricies.&lt;/li&gt;&#xA;&lt;li&gt;Aliquam vitae ultrices nisi. Vivamus velit ex, fermentum eget sagittis et, iaculis eu lacus.&lt;/li&gt;&#xA;&lt;li&gt;Pellentesque interdum pretium commodo.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Pinceau Rond</title>
-      <link>//localhost:1313/produits/peinture/pinceau-rond/</link>
+      <link>http://localhost:1313/produits/peinture/pinceau-rond/</link>
       <pubDate>Fri, 21 Mar 2025 19:40:23 +0100</pubDate>
-      <guid>//localhost:1313/produits/peinture/pinceau-rond/</guid>
-      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;p&gt;Aenean id vehicula&lt;/p&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;p&gt;Vestibulum vehicula&lt;/p&gt;</description>
+      <guid>http://localhost:1313/produits/peinture/pinceau-rond/</guid>
+      <description>&lt;h2 id=&#34;notre-produit&#34;&gt;Notre Produit&lt;/h2&gt;&#xA;&lt;p&gt;Aenean id vehicula&lt;/p&gt;&#xA;&lt;h2 id=&#34;nos-commentaires&#34;&gt;Nos Commentaires&lt;/h2&gt;&#xA;&lt;p&gt;Vestibulum vehicula&lt;/p&gt;</description>
     </item>
     <item>
       <title>Peinture acrylique</title>
-      <link>//localhost:1313/produits/peinture/peinture-acrylique/</link>
+      <link>http://localhost:1313/produits/peinture/peinture-acrylique/</link>
       <pubDate>Fri, 21 Mar 2025 19:40:00 +0100</pubDate>
-      <guid>//localhost:1313/produits/peinture/peinture-acrylique/</guid>
-      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;p&gt;Cras pharetra et odio in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.&lt;br&gt;&#xA;Sed eu lacus nunc.&lt;/p&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;p&gt;Aliquam felis massa, ornare ac nisl !&lt;/p&gt;</description>
+      <guid>http://localhost:1313/produits/peinture/peinture-acrylique/</guid>
+      <description>&lt;h2 id=&#34;notre-produit&#34;&gt;Notre Produit&lt;/h2&gt;&#xA;&lt;p&gt;Cras pharetra et odio in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.&lt;br&gt;&#xA;Sed eu lacus nunc.&lt;/p&gt;&#xA;&lt;h2 id=&#34;nos-commentaires&#34;&gt;Nos commentaires&lt;/h2&gt;&#xA;&lt;p&gt;Aliquam felis massa, ornare ac nisl !&lt;/p&gt;</description>
     </item>
     <item>
       <title>Peinture à l&#39;eau</title>
-      <link>//localhost:1313/produits/peinture/peinture-eau/</link>
+      <link>http://localhost:1313/produits/peinture/peinture-eau/</link>
       <pubDate>Fri, 21 Mar 2025 19:39:44 +0100</pubDate>
-      <guid>//localhost:1313/produits/peinture/peinture-eau/</guid>
-      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Nam ultrices auctor lectus at fermentum.&lt;/li&gt;&#xA;&lt;li&gt;Mauris venenatis rutrum lacus, ac posuere nisi accumsan a.&lt;/li&gt;&#xA;&lt;li&gt;Mauris quis nulla ac mauris tristique malesuada non a mi.&#xA;Duis consequat posuere semper.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;p&gt;Praesent tempus et neque eget finibus.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/produits/peinture/peinture-eau/</guid>
+      <description>&lt;h2 id=&#34;notre-produit&#34;&gt;Notre Produit&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Nam ultrices auctor lectus at fermentum.&lt;/li&gt;&#xA;&lt;li&gt;Mauris venenatis rutrum lacus, ac posuere nisi accumsan a.&lt;/li&gt;&#xA;&lt;li&gt;Mauris quis nulla ac mauris tristique malesuada non a mi.&#xA;Duis consequat posuere semper.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;nos-commentaires&#34;&gt;Nos commentaires&lt;/h2&gt;&#xA;&lt;p&gt;Praesent tempus et neque eget finibus.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

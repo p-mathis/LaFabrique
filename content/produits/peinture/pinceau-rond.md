@@ -4,12 +4,14 @@ draft = false
 title = 'Pinceau Rond'
 photo = 'pinceau-rond.jpg'
 alt = 'des pinceaux ronds'
-rayon = 'peinture'
+photoTitle = 'les ronds'
+photoComment = 'lorem ipsum ronds'
 numero = 'PR'
+description = 'ronds ipsum'
 keywords = ["peinture", "brosse", "poil", "marte"]
 +++
 
-## Description
+## Notre Produit
 Aenean id vehicula 
-## Commentaire
+## Nos Commentaires
  Vestibulum vehicula

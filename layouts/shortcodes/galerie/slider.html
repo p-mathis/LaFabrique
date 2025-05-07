@@ -1,0 +1,109 @@
+<!-- https://flowbite.com/docs/components/gallery  Gallery with slider -->
+<!-- concatenation de variables : https://stackoverflow.com/questions/46771451/concatenate-variable-in-hugo -->
+
+
+<!-- appeler flowbite -->
+<script src="{{ .Site.BaseURL}}/flowbite/dist/flowbite.min.js"></script>
+
+<!-- initialiser quelques variables -->
+{{ $sliderImg := .Page.Params.sliderImg }}
+{{ $sliderAlt := .Page.Params.sliderAlt }}
+{{ $sliderFigCaption := .Page.Params.sliderFigCaption }}
+{{ $path := .Page.Params.sliderPath }}
+
+{{ $srcSlice := slice }}
+{{ $page := .Page }}
+
+<!-- Créer la liste des sources : $srcSlice -->
+<!-- Pour la concaténation de variables, voir : https://stackoverflow.com/questions/46771451/concatenate-variable-in-hugo -->
+ 
+{{range $sliderImg}}
+  {{$srcString := printf "%s" . | printf "%s%s" "/" | printf "%s%s" $path | printf "%s%s" "/"  |printf "%s%s" "images"  | printf "%s" }}
+  {{ $srcSlice = $srcSlice | append (resources.GetMatch $srcString) }}
+{{end}}
+
+<!-- Initialiser le compteur -->
+ 
+{{ $.Store.Set "i" 0 }}
+
+<!-- Commencer le diaporama -->
+<!-- Voir le modèle type de diaporama : https://flowbite.com/docs/components/carousel/ -->
+
+<div name="main-div" class="relative " data-carousel="slide">
+  <div name="height-div" class="h-[45vh]"> 
+
+    {{ range $srcSlice}}
+      {{ $index := $.Store.Get "i"}}
+      {{ $src := index $srcSlice $index }}
+      {{ $alt :=  index $sliderAlt $index}}
+      {{ $caption :=  index $sliderFigCaption $index}}
+
+      {{- $respSizes := slice "320" "640" "960" "1280" "1600" "1920" -}}
+      {{- $divClass := "" -}}{{/* Init'g */}}
+      {{- $imgClass := "rounded-2xl mt-6 h-[34vh] aspect-square" -}}
+      {{- $dataSzes := "(min-width: 1024px) 100vw, 50vw" -}}
+      {{- $actualImg := $src.Resize "640x jpg" -}}
+
+      <div name="item-div" class="duration-700 ease-in-out " data-carousel-item>      
+        <div name="col-div" class="grid grid-cols-1 justify-items-center">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                {{- with $respSizes -}}
+                  {{- range $i, $e := . -}}
+                  {{- if ge $src.Width . -}}
+                    {{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " webp") ).RelPermalink }} {{ . }}w
+                  {{- end -}}
+                {{- end -}}
+              {{- end -}}"
+              sizes="{{ $dataSzes }}"
+            />
+            <source
+              type="image/jpeg"
+              srcset="
+                {{- with $respSizes -}}
+                  {{- range $i, $e := . -}}
+                    {{- if ge $src.Width . -}}
+                      {{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " jpg") ).RelPermalink }} {{ . }}w
+                    {{- end -}}
+                {{- end -}}
+              {{- end -}}"\
+              sizes="{{ $dataSzes }}"
+            />
+            <img class="{{ $imgClass }}"
+              src="{{ $actualImg.RelPermalink }}"
+              alt="{{ $alt }}"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+        <p class=" text-myred font-semibold pt-3 text-center text-lg" >{{ index $sliderFigCaption $index }}</p>   
+      </div>
+
+    {{ $.Store.Add "i" 1}}
+    {{ end }}
+
+  </div>
+
+  <!-- Slider controls -->
+  <!-- Bouton gauche -->
+  <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-mycolor-400 group-hover:bg-mycolor-600 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+      <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+      </svg>
+      <span class="sr-only">Prédédent</span>
+    </span>
+  </button>
+  <!-- Bouton droit -->
+  <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-mycolor-400 group-hover:bg-mycolor-600 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+      <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+      </svg>
+      <span class="sr-only">Suivant</span>
+    </span>
+  </button>
+
+</div>

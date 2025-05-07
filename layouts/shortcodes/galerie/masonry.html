@@ -1,0 +1,183 @@
+<!-- https://flowbite.com/docs/components/gallery masonry grid -->
+
+{{ $data := dict }}
+
+<!-- get the name of json file : 
+ jsonname.json -->
+{{ $json := .Get "json" }} 
+
+{{ with .Page.Resources.Get $json}}
+    {{ with . | transform.Unmarshal }}
+        {{ $data = . }}
+    {{ end }}
+{{ end }}
+
+{{ $page := .Page }}
+{{ $lenData := len $data}}
+len data : {{ $lenData}}
+
+{{ $count := $.Store.Set "i" 0 }}
+mon count store : {{$.Store.Get "i" }}
+{{ $.Store.Add "i" 1}}
+mon compte plus : {{$.Store.Get "i" }}
+
+
+
+<!-- Début du code de la masonry -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+  {{ range $data }}
+  {{ $modulo := mod (int ($.Store.Get "i")) 4 }}
+  {{ if eq $modulo 0 }}
+  <div class="grid gap-4">
+    {{ end}}
+  
+  {{ $srcstring := printf "galerie/%s" .src }}
+    {{ $src := $page.Resources.GetMatch $srcstring }}
+    {{ $alt := .alt }}
+    {{ $caption := .caption }}
+
+
+    {{ $respSizes := slice "320" "640" "960" "1280" "1600" "1920" }}
+    {{ $divClass := "" }}
+    {{ $imgClass := "w-full h-auto " }}
+    {{ $dataSzes := "(min-width: 1024px) 100vw, 50vw" }}
+    {{ $actualImg := $src.Resize "640x jpg" }}
+
+      <figure>        
+        <source
+          type="image/webp"
+          srcset="
+            {{- with $respSizes -}}
+              {{- range $i, $e := . -}}
+              {{- if ge $src.Width . -}}
+                {{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " webp") ).RelPermalink }} {{ . }}w
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}"
+          sizes="{{ $dataSzes }}"
+        />
+        <source
+          type="image/jpeg"
+          srcset="
+            {{- with $respSizes -}}
+              {{- range $i, $e := . -}}
+                {{- if ge $src.Width . -}}
+                  {{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " jpg") ).RelPermalink }} {{ . }}w
+                {{- end -}}
+            {{- end -}}
+          {{- end -}}"\
+          sizes="{{ $dataSzes }}"
+        />
+        <img class="{{ $imgClass }}"
+          src="{{ $actualImg.RelPermalink }}"
+          width="{{ $src.Width }}"
+          height="{{ $src.Height }}"
+          alt="{{ $alt }}"
+          loading="lazy"
+        />
+        <figcaption class="px-5 py-3 text-center text-lg font-semibold">{{ $caption }} / {{ $.Store.Get "i" }}</figcaption> 
+      </figure>
+      {{ $.Store.Add "i" 1}}
+      {{ if eq $modulo 0 }}
+    </div>
+        {{ end}}
+  {{ end }}
+</div> 
+
+
+
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+  
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
+      </div>
+
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
+      </div>
+
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
+      </div>
+
+
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
+      </div>
+
+</div>
+
+MASONRY
+
+
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+  <div class="grid gap-4">
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
+      </div>
+  </div>
+  <div class="grid gap-4">
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
+      </div>
+  </div>
+  <div class="grid gap-4">
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
+      </div>
+  </div>
+  <div class="grid gap-4">
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
+      </div>
+      <div>
+          <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
+      </div>
+  </div>
+</div>

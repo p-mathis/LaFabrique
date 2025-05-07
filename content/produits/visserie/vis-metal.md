@@ -4,8 +4,10 @@ draft = false
 title = 'Vis Métal'
 photo = 'vis-metal.jpg'
 alt = 'Des vis pour métal'
-rayon = 'visserie'
+photoTitle = 'Vis métal'
+photoComment = 'Pas pour le bois !'
 numero = '458/9-2'
+description = 'vis métal ipsum'
 keywords = ["métal", "boulon", "clou", "colle"]
 +++
 

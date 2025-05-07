@@ -2,46 +2,46 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Visserie on Ma Fabrique</title>
-    <link>//localhost:1313/produits/visserie/</link>
+    <link>http://localhost:1313/produits/visserie/</link>
     <description>Recent content in Visserie on Ma Fabrique</description>
     <generator>Hugo</generator>
     <language>fr-fr</language>
     <lastBuildDate>Fri, 21 Mar 2025 19:38:50 +0100</lastBuildDate>
-    <atom:link href="//localhost:1313/produits/visserie/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/produits/visserie/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Clou Tête d&#39;Homme</title>
-      <link>//localhost:1313/produits/visserie/clou-tete-homme/</link>
+      <link>http://localhost:1313/produits/visserie/clou-tete-homme/</link>
       <pubDate>Fri, 21 Mar 2025 19:38:50 +0100</pubDate>
-      <guid>//localhost:1313/produits/visserie/clou-tete-homme/</guid>
-      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;p&gt;Ut in eros porta, viverra est sit amet, commodo mi.&lt;br&gt;&#xA;Nunc in semper lorem. Etiam eu vestibulum elit.&lt;/p&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;p&gt;Curabitur vel vestibulum diam !&lt;/p&gt;</description>
+      <guid>http://localhost:1313/produits/visserie/clou-tete-homme/</guid>
+      <description>&lt;h2 id=&#34;notre-produit&#34;&gt;Notre Produit&lt;/h2&gt;&#xA;&lt;p&gt;Ut in eros porta, viverra est sit amet, commodo mi.&lt;br&gt;&#xA;Nunc in semper lorem. Etiam eu vestibulum elit.&lt;/p&gt;&#xA;&lt;h2 id=&#34;nos-commentaires&#34;&gt;Nos Commentaires&lt;/h2&gt;&#xA;&lt;p&gt;Curabitur vel vestibulum diam !&lt;/p&gt;</description>
     </item>
     <item>
       <title>Vis perforante</title>
-      <link>//localhost:1313/produits/visserie/vis-perforante/</link>
+      <link>http://localhost:1313/produits/visserie/vis-perforante/</link>
       <pubDate>Fri, 21 Mar 2025 19:38:19 +0100</pubDate>
-      <guid>//localhost:1313/produits/visserie/vis-perforante/</guid>
+      <guid>http://localhost:1313/produits/visserie/vis-perforante/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;p&gt;Sed vulputate leo ut sem interdum, et faucibus turpis finibus. Suspendisse potenti. Duis posuere erat quis libero porta, ac euismod eros mollis.&lt;/p&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;p&gt;Curabitur congue scelerisque lacus at tempor.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Vis Métal</title>
-      <link>//localhost:1313/produits/visserie/vis-metal/</link>
+      <link>http://localhost:1313/produits/visserie/vis-metal/</link>
       <pubDate>Fri, 21 Mar 2025 19:37:50 +0100</pubDate>
-      <guid>//localhost:1313/produits/visserie/vis-metal/</guid>
+      <guid>http://localhost:1313/produits/visserie/vis-metal/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet !&lt;/p&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;p&gt;In id diam quam !&lt;/p&gt;</description>
     </item>
     <item>
       <title>Vis bois</title>
-      <link>//localhost:1313/produits/visserie/vis-bois/</link>
+      <link>http://localhost:1313/produits/visserie/vis-bois/</link>
       <pubDate>Fri, 21 Mar 2025 19:37:34 +0100</pubDate>
-      <guid>//localhost:1313/produits/visserie/vis-bois/</guid>
-      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;p&gt;Aliquam faucibus, neque sed consectetur rutrum&lt;/p&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;&#xA;&lt;p&gt;Duis ac ipsum laoreet ligula aliquet sagittis.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/produits/visserie/vis-bois/</guid>
+      <description>&lt;h2 id=&#34;notre-produit&#34;&gt;Notre Produit&lt;/h2&gt;&#xA;&lt;p&gt;Aliquam faucibus, neque sed consectetur rutrum&lt;/p&gt;&#xA;&lt;h2 id=&#34;nos-commentaires&#34;&gt;Nos Commentaires&lt;/h2&gt;&#xA;&lt;p&gt;Duis ac ipsum laoreet ligula aliquet sagittis.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Clou</title>
-      <link>//localhost:1313/produits/visserie/clou/</link>
+      <link>http://localhost:1313/produits/visserie/clou/</link>
       <pubDate>Fri, 21 Mar 2025 19:37:15 +0100</pubDate>
-      <guid>//localhost:1313/produits/visserie/clou/</guid>
-      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;&#xA;&lt;h2 id=&#34;commentaire&#34;&gt;Commentaire&lt;/h2&gt;</description>
+      <guid>http://localhost:1313/produits/visserie/clou/</guid>
+      <description>&lt;h2 id=&#34;notre-produit&#34;&gt;Notre Produit&lt;/h2&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vehicula erat at erat rhoncus, vel iaculis est interdum. Donec eu pretium sapien. Orci varius natoque.&lt;/p&gt;&#xA;&lt;h2 id=&#34;nos-commentaires&#34;&gt;Nos Commentaires&lt;/h2&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vehicula erat at erat rhoncus, vel iaculis est interdum. Donec eu pretium sapien. Orci varius natoque.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

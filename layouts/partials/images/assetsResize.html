@@ -1,7 +1,0 @@
-{{- $imgBase := "images/" -}}
-{{- $srcString := (printf "%s%s" $imgBase .Page.Params.photo ) -}}
-{{ $src := resources.Get $srcString }}
-{{ $image_title := .Page.Params.photoTitle }}
-{{ $image_comment := .Page.Params.photoComment }}
-{{ $alt := .Page.Params.alt }}
-

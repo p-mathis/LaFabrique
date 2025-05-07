@@ -4,8 +4,10 @@ draft = false
 title = 'Vis perforante'
 photo = 'vis-perforante.jpg'
 alt = 'des vis perforantes'
-rayon = ''
-numero = ''
+photoTitle = ''
+photoComment = ''
+numero = 'VP-vp'
+description = 'perforante ipsum'
 keywords = ["métal", "boulon", "clou", "colle"]
 +++
 

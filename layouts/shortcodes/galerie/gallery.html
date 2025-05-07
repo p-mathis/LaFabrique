@@ -1,0 +1,66 @@
+<!-- https://flowbite.com/docs/components/gallery  default gallery -->
+
+{{ $data := dict }}
+
+<!-- get the name of json file : 
+ jsonname.json -->
+{{ $json := .Get "json" }} 
+
+{{ with .Page.Resources.Get $json}}
+    {{ with . | transform.Unmarshal }}
+        {{ $data = . }}
+    {{ end }}
+{{ end }}
+
+{{ $page := .Page }}
+
+<!-- Début du code de la galerie -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+  {{ range $data }}
+    {{ $srcstring := printf "galerie/%s" .src }}
+    {{ $src := $page.Resources.GetMatch $srcstring }}
+    {{ $alt := .alt }}
+    {{ $caption := .caption }}
+
+    {{ $respSizes := slice "320" "640" "960" "1280" "1600" "1920" }}
+    {{ $divClass := "" }}
+    {{ $imgClass := "w-full h-auto " }}
+    {{ $dataSzes := "(min-width: 1024px) 100vw, 50vw" }}
+    {{ $actualImg := $src.Resize "640x jpg" }}
+   
+      <figure>       
+        <source
+          type="image/webp"
+          srcset="
+            {{- with $respSizes -}}
+              {{- range $i, $e := . -}}
+              {{- if ge $src.Width . -}}
+                {{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " webp") ).RelPermalink }} {{ . }}w
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}"
+          sizes="{{ $dataSzes }}"
+        />
+        <source
+          type="image/jpeg"
+          srcset="
+            {{- with $respSizes -}}
+              {{- range $i, $e := . -}}
+                {{- if ge $src.Width . -}}
+                  {{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " jpg") ).RelPermalink }} {{ . }}w
+                {{- end -}}
+            {{- end -}}
+          {{- end -}}"\
+          sizes="{{ $dataSzes }}"
+        />
+        <img class="{{ $imgClass }}"
+          src="{{ $actualImg.RelPermalink }}"
+          width="{{ $src.Width }}"
+          height="{{ $src.Height }}"
+          alt="{{ $alt }}"
+          loading="lazy"
+        />
+        <figcaption class="px-5 py-3 text-center text-lg font-semibold">{{ $caption }}</figcaption> 
+      </figure>
+  {{ end }}
+</div> 

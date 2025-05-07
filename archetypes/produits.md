@@ -2,13 +2,15 @@
 date = '{{ .Date }}'
 draft = false
 title = ''
-photo = '_default_image.jpg'
+photo = 'logo.jpg'
 alt = ''
-rayon = ''
+photoTitle = ''
+photoComment = ''
 numero = ''
+description = ''
 keywords = []
 +++
 
-## Description
+## Notre Produit
 
-## Commentaire
+## Nos commentaires

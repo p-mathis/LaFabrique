@@ -1,12 +1,10 @@
 {{- $imgBase := "images/" -}}
 {{- $srcString := (printf "%s%s" $imgBase .Page.Params.photo ) -}}
 {{ $src := resources.Get $srcString }}
-{{ $image_title := .Page.Params.photoTitle }}
-{{ $image_comment := .Page.Params.photoComment }}
 {{ $alt := .Page.Params.alt }}
 
-
 <!-- le html pour resize images Déclaration variables-->
+
 {{ $respSizes := slice "320" "640" "960" "1280" "1600" "1920" }}
 {{ $divClass := "" }}
 {{ $imgClass := "w-full h-auto " }}
@@ -50,6 +48,5 @@
         loading="lazy"
     />
 </picture>
+
 <!-- fin du html picture -->
-
-

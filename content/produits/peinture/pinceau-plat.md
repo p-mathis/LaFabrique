@@ -4,14 +4,16 @@ draft = false
 title = 'Pinceau plat'
 photo = 'pinceau-plat.jpg'
 alt = 'un jeu de pinceaux plats'
-rayon = 'peinture'
+photoTitle = 'Platum Pinssotum'
+photoComment = 'Oh ! les jolis pinceaux !'
 numero = 'PPP'
+description = 'plat ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas finibus non nunc non luctus. Donec placerat rhoncus molestie. Vivamus laoreet mauris eros, nec efficitur metus.'
 keywords = ["peinture", "brosse", "poil", "soie"]
 +++
 
-## Description
+## Notre Produit
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-## Commentaire
+## Nos Commentaires
 - Aliquam at semper lectus. 
 - Nulla hendrerit interdum augue, eu elementum sem accumsan vitae. 
 - Praesent mollis turpis at diam vehicula finibus. 

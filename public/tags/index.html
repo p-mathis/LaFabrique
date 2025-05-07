@@ -2,27 +2,231 @@
 <html lang="fr-fr">
    
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>Tags</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <link rel="stylesheet" href="//localhost:1313//css/main.css">    
+  <meta name="keywords" content="">
+  <title>Tags</title>
+
+  <link rel="stylesheet" href="http://localhost:1313//css/main.css"> 
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
+
+
   </head>
   
   <body>
     
-      <nav class="bg-mycolor-500 text-white font-bold text-center">
-    <ul class="list-none">
-        <li class="hover:text-myred hover:scale-125"><a class="no-underline" href="/">Accueil</a></li>
-        <li class="hover:text-myred hover:scale-125"><a class="no-underline " href="/histoire">Histoire</a></li>
+      
+
+
+
+<nav name="nav-md" class="hidden md:flex bg-mycolor-300 space-x-12 list-none text-xl font-bold h-16 sticky top-0 z-50" x-data="{ open: false }">
+    <a name="ancre-logo" class="" href="/"><img class="" src="/images/logo_hu_65bd4696a89562db.jpg" alt="un dessin carré de la devanture d&#39;une vieille droguerie, logo du site"></a>
+
+    
+        <li name="li-parent" class="pt-4 hover:scale-110 ">
+            <a name="a-parent" class="no-underline hover:text-myred" href="/">Accueil</a>
+
+            
+        </li>
+    
+        <li name="li-parent" class="pt-4 hover:scale-110 ">
+            <a name="a-parent" class="no-underline hover:text-myred" href="/histoire/">Histoire</a>
+
+            
+        </li>
+    
+        <li name="li-parent" class="pt-4 hover:scale-110 ">
+            <a name="a-parent" class="no-underline hover:text-myred" href="/produits/">Produits</a>
+
+            
+                <svg name="svg-sm-child" @click="open = ! open" x-bind:class="{'rotate-180': open, 'rotate-0': !open}"  viewBox="0 0 20 20" class="inline w-4 h-4 fill-current"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"></path></svg>
+
+                <ul name="ul-child" class="list-none text-mywhite text-left border-2 border-mywhite rounded-xl mt-4 pt-4 px-8 ml-8 bg-mycolor-500" x-show="open" x-on:mouseleave="setTimeout(() => { open = false }, 300)">
+                    
+                        <li name="li-child" class="pb-4">
+                            <a name="a-child" class="no-underline hover:text-mycolor-800 hover:italic" href="/produits/nettoyage/">Nettoyage</a>
+                        </li>
+                    
+                        <li name="li-child" class="pb-4">
+                            <a name="a-child" class="no-underline hover:text-mycolor-800 hover:italic" href="/produits/peinture/">Peinture</a>
+                        </li>
+                    
+                        <li name="li-child" class="pb-4">
+                            <a name="a-child" class="no-underline hover:text-mycolor-800 hover:italic" href="/produits/visserie/">Visserie</a>
+                        </li>
+                    
+                </ul>
+            
+        </li>
+    
+        <li name="li-parent" class="pt-4 hover:scale-110 ">
+            <a name="a-parent" class="no-underline hover:text-myred" href="/catalogue/">Catalogue</a>
+
+            
+        </li>
+    
+        <li name="li-parent" class="pt-4 hover:scale-110 ">
+            <a name="a-parent" class="no-underline hover:text-myred" href="/contact/">Contact</a>
+
+            
+        </li>
+    
+</nav> 
+
+
+
+<nav name="nav-sm" class="md:hidden" x-data="{ openSM: false, openChild: false }">
+    <div name="entête" class="flex items-center bg-mycolor-300 justify-between">
+        <a name="ancre-titre" class="no-underline" href="/"><img class="h-12 inline" src="/images/logo_hu_65bd4696a89562db.jpg" alt="un dessin carré de la devanture d&#39;une vieille droguerie, logo du site">
+        <span class="text-lg text-mycolor-500 font-bold pl-4">LA FABRIQUE</span></a>
+
+        <svg name="svg-ham"  viewBox="0 0 20 20" class="h-10" @click="openSM = !openSM" >
+            <path name="svg-sandwich" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" x-show="!openSM" class="fill-mycolor-500"></path>
+            <path name="svg-croix" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"  x-show="openSM" class="fill-myred"></path>
+        </svg>
+    </div>
+
+    <ul name="ul-sm-parent" class="list-none bg-mycolor-600 text-mywhite font-medium pl-4 pt-2" x-show="openSM">
+        
+            <li name="li-sm-parent" class="pb-2">
+                <a name="a-sm-parent" class="no-underline hover:text-myred hover:italic" href="/">Accueil</a>
+                
+            </li>
+        
+            <li name="li-sm-parent" class="pb-2">
+                <a name="a-sm-parent" class="no-underline hover:text-myred hover:italic" href="/histoire/">Histoire</a>
+                
+            </li>
+        
+            <li name="li-sm-parent" class="pb-2">
+                <a name="a-sm-parent" class="no-underline hover:text-myred hover:italic" href="/produits/">Produits</a>
+                
+                <svg name="svg-sm-child" class="inline fill-mywhite w-4 h-4" @click="openChild = !openChild" x-bind:class="{'rotate-180': openChild, 'rotate-0': !openChild}" viewBox="0 0 20 20" class="inline w-4 h-4 "><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"></path></svg>
+                <ul name="ul-sm-child" class="list-none bg-mycolor-300 font-light w-1/3 ml-2 mt-2 pl-4 pt-2 rounded-lg" x-show="openChild" x-on:mouseleave="setTimeout(() => { openChild = false }, 300)">
+                    
+                    <li name="li-sm-child" class="pb-1"><a name="a-sm-child" class="no-underline italic text-mycolor-900 hover:text-myred hover:not-italic" href="/produits/nettoyage/">Nettoyage</a></li>
+                    
+                    <li name="li-sm-child" class="pb-1"><a name="a-sm-child" class="no-underline italic text-mycolor-900 hover:text-myred hover:not-italic" href="/produits/peinture/">Peinture</a></li>
+                    
+                    <li name="li-sm-child" class="pb-1"><a name="a-sm-child" class="no-underline italic text-mycolor-900 hover:text-myred hover:not-italic" href="/produits/visserie/">Visserie</a></li>
+                    
+                </ul>
+                
+            </li>
+        
+            <li name="li-sm-parent" class="pb-2">
+                <a name="a-sm-parent" class="no-underline hover:text-myred hover:italic" href="/catalogue/">Catalogue</a>
+                
+            </li>
+        
+            <li name="li-sm-parent" class="pb-2">
+                <a name="a-sm-parent" class="no-underline hover:text-myred hover:italic" href="/contact/">Contact</a>
+                
+            </li>
+        
     </ul>
 </nav>
+
     
+
     
     
   <h1>Tags</h1>
   
   
 
+
+     
+      
+
+<footer class="hidden md:block  bg-mycolor-600 text-mywhite md:text-base lg:text-lg xl:text-xl my-4">
+    <div id="main" class="grid grid-cols-3">
+        <div id="col1_links " class="list-none text-left  py-3 pl-3 lg:pl-4 xl:pl-8">
+            <li>
+                <a class="no-underline hover:text-gray-900 hover:italic hover:font-semibold  " href="#top">Haut de Page</a>
+            </li>
+            <li class="pt-4 ">
+                <a class="no-underline hover:text-gray-900 hover:italic hover:font-semibold  " href="/">Accueil</a>
+            </li>
+            <li class="pt-4 ">
+                <a class="no-underline hover:text-gray-900 hover:italic hover:font-semibold  " href="/produits">Produits</a>
+            </li>
+            <li class="pt-4 ">
+                <a class="no-underline hover:text-gray-900 hover:italic hover:font-semibold  " href="/contact">Contact</a>
+            </li>
+        </div>
+        <div id="col2_map" class="border-r-2 border-l-2 border-mywhite flex items-center justify-center p-2" >
+            <iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11435.232435988959!2d1.7498570601064405!3d44.2316089372849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ac520ae0511b8b%3A0xb1b8f4edc70b0085!2sLa%20Fabrique%20Caylus!5e0!3m2!1sfr!2sfr!4v1744878025285!5m2!1sfr!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+        </div>
+        <div id="col3_coordinates" class="text-right pr-3">
+            <li class="list-none pl-4 pt-4">LaFabrique</li>
+            <li class="list-none pl-4 pt-1">82160 Caylus</li>
+            <li class="list-none pl-4 pt-3">
+                <a class="no-underline" href="tel:+33563281036">&#x1F4F1; : 05 63 28 10 36</a></li>
+            <li class="list-none pl-4 pt-3">
+                <a class="no-underline" href="mailto:fablab@cc-qrga.fr">&#9993;&#65039; : fablab@cc-qrga.fr</a></li>
+        </div>
+        </div>
+
+    <div class="text-left py-3 border-t border-mywhite bg-transparent"><span class="sm:pl-2 lg:pl-4 xl:pl-8 text-sm md:text-base lg:text-lg xl:text-xl text-white">Suivez-nous !</span> <span class="pl-4" ><a class="no-underline" href="https://www.facebook.com/lafabriquecaylus82/"><img src="data:image/png;base64,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" class="w-6 h-6 inline" alt="logo de facebook"></a>
+            <a class="no-underline" href="https://www.google.com/maps/place/La+Fabrique+Caylus/@44.2316093,1.7552859,17z/data=!3m2!4b1!5s0x12ac4df91bec81d5:0xca32cb6fa3023a83!4m6!3m5!1s0x12ac520ae0511b8b:0xb1b8f4edc70b0085!8m2!3d44.2316094!4d1.7601568!16s%2Fg%2F11c5_b1v5x?hl=fr&entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D"><img class="w-6 h-6 inline" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1200px-Google_%22G%22_logo.svg.png" alt="logo google"></a></span>
+
+    </div>
+</div>
+
+</footer>
+ 
+
+
+<footer class="block md:hidden bg-mycolor-600 text-mywhite text-sm py-2 my-2">
+    
+    <div id="row1_links" class="flex items center justify-around pb-2 border-b border-mywhite">
+        <li class="list-none">
+            <a class="no-underline hover:text-gray-900 hover:italic hover:font-semibold  " href="#top">Haut de Page</a>
+        </li>
+        <li class="list-none ">
+            <a class="no-underline hover:text-gray-900 hover:italic hover:font-semibold  " href="/">Accueil</a>
+        </li>
+        <li class="list-none ">
+            <a class="no-underline hover:text-gray-900 hover:italic hover:font-semibold  " href="/contact">Contact</a>
+        </li>        
+    </div>
+    
+    
+    <div id="row2_map " class="flex items-center justify-center p-2 border-b border-mywhite">
+        <iframe class="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11435.232435988959!2d1.7498570601064405!3d44.2316089372849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ac520ae0511b8b%3A0xb1b8f4edc70b0085!2sLa%20Fabrique%20Caylus!5e0!3m2!1sfr!2sfr!4v1744878025285!5m2!1sfr!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    
+    
+    <div id="row3_coordinates" class="flex items-center justify-around border-b border-mywhite py-2">
+        <li class="list-none">LaFabrique<br>82160 Caylus</li>
+        <li class="list-none ">
+            <a class="no-underline" href="tel:+33563281036">&#x1F4F1; : 05 63 28 10 36</a></li>
+        <li class="list-none ">
+            <a class="no-underline" href="mailto:fablab@cc-qrga.fr">&#9993;&#65039; : fablab@cc-qrga.fr</a></li>        
+    </div>
+    
+    
+         <div class="text-left py-3 pl-2 border-b border-mywhite bg-transparent"><span class="sm:pl-2 lg:pl-4 xl:pl-8 text-sm md:text-base lg:text-lg xl:text-xl text-white">Suivez-nous !</span> <span class="pl-4" ><a class="no-underline" href="https://www.facebook.com/lafabriquecaylus82/"><img src="data:image/png;base64,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" class="w-4 h-4 inline" alt="logo de facebook"></a>
+            <a class="no-underline" href="https://www.google.com/maps/place/La+Fabrique+Caylus/@44.2316093,1.7552859,17z/data=!3m2!4b1!5s0x12ac4df91bec81d5:0xca32cb6fa3023a83!4m6!3m5!1s0x12ac520ae0511b8b:0xb1b8f4edc70b0085!8m2!3d44.2316094!4d1.7601568!16s%2Fg%2F11c5_b1v5x?hl=fr&entry=ttu&g_ep=EgoyMDI1MDQwOS4wIKXMDSoASAFQAw%3D%3D"><img class="w-4 h-4 inline" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/1200px-Google_%22G%22_logo.svg.png" alt="logo google"></a></span>
+    </div>
+    
+
+
+</footer>
+
+    
   </body>
 </html>

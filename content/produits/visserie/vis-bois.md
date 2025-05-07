@@ -4,12 +4,14 @@ draft = false
 title = 'Vis bois'
 photo = 'vis-bois.jpg'
 alt = 'des vis bois'
-rayon = 'visserie'
+photoTitle = 'Vis bois et agglo'
+photoComment = 'la pire qualité au meilleur prix'
 numero = 'Vis01'
+description = 'vis bois ipsum !<br>consectetur adipiscing elit. Vivamus turpis nibh, mattis eget lectus eu, congue facilisis mauris. Ut sit amet iaculis orci. Nam ut.'
 keywords = ["bois", "agglo", "clou", "colle"]
 +++
 
-## Description
+## Notre Produit
 Aliquam faucibus, neque sed consectetur rutrum
-## Commentaire
+## Nos Commentaires
 Duis ac ipsum laoreet ligula aliquet sagittis.

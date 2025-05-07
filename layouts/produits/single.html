@@ -1,23 +1,27 @@
 {{ define "main" }}
   <main aria-role="main">
+
     {{ $photo_title := .Page.Params.photoTitle }}
     {{ $photo_comment := .Page.Params.photoComment }}
-    {{ $currentSection := .CurrentSection }}
-    {{ $rayon := partial "sliceSection.html"  $currentSection }}
 
-    <!-- titre et photo écran md et plus -->
+    {{ $currentSection := .CurrentSection }}
+    {{ $slice := split $currentSection "/" }}
+    {{ $len := $slice | len }}
+    {{ $index := math.Sub $len 2 }}
+    {{ $rayon := index $slice $index }}
+      <!-- titre et photo écran md et plus -->
     <div class="hidden md:grid grid-cols-5 font-bold text-center justify-center items-center bg-mycolor-700">
       
       <div class="col-span-3">
         <h1 class="text-mywhite uppercase">{{ .Title }}<br><br><span class="italic md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">{{ $photo_comment }}</span></h1>
       </div>
       <div class="col-span-2">
-        {{ partial "imageAssets.html" . }}
+        {{ partial "srcsetInAssets.html" . }}
       </div>        
     </div>
     <!-- titre et photo écran sm -->
     <div class="md:hidden bg-mycolor-700 font-bold text-white text-center ">
-      {{ partial "imageAssets.html" . }}
+      {{ partial "srcsetInAssets.html" . }}
       <h1 class="py-4 text-xl text-mywhite uppercase" style="letter-spacing: .3rem;">{{ .Title }}<br><span class="text-base italic" style="letter-spacing: .15rem;">{{ $photo_comment }}</span></h1>
     </div>
 
@@ -26,9 +30,7 @@
       <div class="m-auto md:w-3/4  border-2 md:border-4 border-myred rounded-xl p-2 md:px-12 bg-gradient-to-r from-mycolor-400 via-mycolor-100 to-mycolor-600 text-left text-mycolor-900 font-bold">
         <span class="capitalize">{{ $photo_title }}</span><br>
         {{ $photo_comment }} <br>
-        Rayon : <span class="capitalize">{{ $rayon }}</span> - Réf : {{ .Params.numero}}
-
-        
+        Rayon : <span class="capitalize">{{ $rayon }}</span> - Réf #{{ .Params.numero}}
       </div>
     </div>
 
@@ -36,10 +38,6 @@
     <div class="md:mt-2 md:pt-2 md:border-t-2 md:border-myred">
       {{ .Content }}
     </div>
-
-    TEST IMAGES PARTIALS
-    {{ partial "images/assetsResize.html" . }}
-
-
+    
   </main>
 {{ end }}

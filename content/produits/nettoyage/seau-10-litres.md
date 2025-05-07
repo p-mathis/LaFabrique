@@ -4,14 +4,16 @@ draft = false
 title = 'Seau 10 Litres'
 photo = 'seau-10-litres.jpg'
 alt = 'des seaux de 10 litres'
-rayon = 'nettoyage'
+photoTitle = '10 litres ménage et aliments!'
+photoComment = 'des lots de seaux en promotion'
 numero = 'VV12'
+description = '10l lorem ipsum.<br>dolor sit amet, consectetur adipiscing elit. In tempor aliquet nunc quis convallis. Sed scelerisque lorem ac dolor efficitur, ac efficitur erat accumsan. Aliquam.'
 keywords = ["nettoyage", "grain", "contenance", "litres", "animaux"]
 +++
 
-## Description
+## Notre Produit
 Curabitur congue scelerisque lacus at tempor. Duis vitae risus et velit maximus ullamcorper nec a sapien. Praesent fermentum ante ac placerat condimentum. Suspendisse potenti. 
-## Commentaire
+## Nos commentaires
 Suspendisse potenti. 
 - Duis posuere erat quis libero porta, ac euismod eros mollis.
 - Nulla facilisis nisl et lacus consequat, a auctor erat finibus.

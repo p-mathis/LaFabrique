@@ -4,16 +4,17 @@ draft = false
 title = 'Bassine'
 photo = 'bassine.jpg'
 alt = 'une bassine propre'
-rayon = 'nettoyage'
-numero = 'N-001'
-keywords = ["bassine", "métal", "fer", "eau"]
 photoTitle = "Belles bassines !"
 photoComment = "Un grand choix de bassines"
+numero = 'N-001'
+description = 'Bassine ipsum<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat tellus id faucibus rhoncus.<br>In mattis odio non quam tempor scelerisque. Fusce feugiat est ac.'
+keywords = ["bassine", "métal", "fer", "eau", "huile"]
+
 +++
 
-## Description
+## Notre Produit
 Pellentesque luctus lacus a pulvinar faucibus.
 
-## Commentaire
+## Nos commentaires
 Suspendisse tempor sodales lacus vestibulum sollicitudin.  
 Pellentesque euismod lorem commodo lacus venenatis, id aliquet justo ullamcorper. 

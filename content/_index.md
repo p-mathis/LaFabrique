@@ -4,6 +4,7 @@ draft = false
 title = 'Accueil'
 +++
 
+<!-- titre et photo écran md et plus -->
 <div class="hidden md:grid grid-cols-5 font-bold text-center justify-center items-center bg-mycolor-700">
     <div class="col-span-3">
         <h1 class="text-mywhite ">MA QUINCAILLERIE<br><br><span class="italic md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">Au Vieux Caylus</span></h1>
@@ -12,7 +13,7 @@ title = 'Accueil'
         {{< images/srcsetInAssets src="quincaillerieCarre.jpg" alt="la devanture de la quincaillerie au vieux caylus" >}}
     </div>        
 </div>
-
+ <!-- titre et photo écran sm -->
 <div class="md:hidden bg-mycolor-700 font-bold text-white text-center ">
     {{< images/srcsetInAssets src="quincaillerieRectangle.jpg" alt="L'intérieur de la quincaillerie au vieux caylus" >}}
     <h1 class="py-4 text-xl text-mywhite" style="letter-spacing: .3rem;">Ma Quincaillerie<br><span class="text-base italic" style="letter-spacing: .15rem;">Au Vieux Caylus</span></h1>

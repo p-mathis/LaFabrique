@@ -21,3 +21,12 @@ Consultez la page [histoire de la Quincaillerie](https://www.federation-quincail
 {{< typo/spaceLine >}}
 {{< images/srcsetInPage src="histoire-quincaillerie.jpg" alt="l'intérieur d'une quincaillerie" >}}
 
+## Une galerie
+{{< galerie/gallery json="galerie.json" >}}
+
+
+## Vidéo YouTube
+<br>
+<div class="md:w-7/12 mx-auto">
+{{< youtube m_m5FOEY0Hc >}}
+</div>

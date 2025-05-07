@@ -4,14 +4,16 @@ draft = false
 title = 'Peinture acrylique'
 photo = 'peinture-acrylique.jpg'
 alt = 'un pot de peinture acrylique'
-rayon = 'peinture'
 numero = 'PP_58589'
+photoTitle = 'Acrylique mais pas synthétique'
+photoComment = 'Les meilleures peintures aux pires prix !'
+description = 'acrylique ipsum.'
 keywords = ["peinture", "solvant", "coloris", "térébenthine"]
 +++
 
-## Description
+## Notre Produit
 Cras pharetra et odio in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.  
 Sed eu lacus nunc. 
 
-## Commentaire
+## Nos commentaires
 Aliquam felis massa, ornare ac nisl !

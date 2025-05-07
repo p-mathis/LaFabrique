@@ -1,0 +1,52 @@
+{{ $data := dict }}
+
+<!-- get the name of json file : 
+ jsonname.json -->
+{{ $json := .Get "json" }} 
+
+{{ with .Page.Resources.Get $json}}
+    {{ with . | transform.Unmarshal }}
+        {{ $data = . }}
+    {{ end }}
+{{ end }}
+mon data : {{ $data }}
+{{ $page := .Page }}
+<br>ma page avant le range : {{ $page }}
+
+{{ .Store.Set "greeting" "Hello" }}
+
+{{ range $data }}
+    {{ $srcstring := printf "galerie/%s" .src }}
+    {{ $srcM := $page.Resources.GetMatch $srcstring }}
+    <br>mon $srcM dans le range : {{ $srcM }}
+    <br>ma pohto : {{ $srcM }}<br>
+
+    <img src="{{ $srcM.RelPermalink }}" alt ="{{ .alt}}">
+   alt="{{.alt}}">}} / titre = "{{ .title}}"
+<br>ESSAI IMAGE MODULABLE
+
+    {{ $src := newScratch }}
+   {{ $src.Set "src" $srcM }}
+   {{ $alt := newScratch }}
+   {{ $alt.Set "alt" .alt }}
+
+   {{ partial "srcsetInPageStore.html" }}
+
+   <br>
+   salutation dans le range : {{ .Store.Get "greeting" }}<br>
+
+   test avec newscratch
+   <br>
+   {{ $s := newScratch }}
+   {{ $s.Set "greeting" "Hello" }}
+   {{ $s.Get "greeting" }}  
+<br>FIN IMAGE MODULABLE
+{{ end }}
+
+en dehors de closure<br>
+<br>{{ .Store.Set "greeting" "Hello" }}
+   {{ .Store.Get "greeting" }}
+
+
+
+

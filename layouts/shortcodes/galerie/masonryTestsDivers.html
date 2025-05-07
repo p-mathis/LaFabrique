@@ -1,0 +1,47 @@
+{{ $slice := slice "Paul" "Ringo" "John" "George" }}
+<br>{{ .Store.Set "greeting" "Hello" }}
+   {{ .Store.Get "greeting" }}<br>
+
+   {{ $s := newScratch }}
+{{ range $slice }}
+
+{{ $s.Set "greeting" "Hello" }}
+test {{ $s.Get "greeting" }} ; 
+{{.}}<br>
+
+{{ end }}
+
+
+{{ $data := dict }}
+
+<!-- get the name of json file : 
+ jsonname.json -->
+{{ $json := .Get "json" }} 
+
+{{ with .Page.Resources.Get $json}}
+    {{ with . | transform.Unmarshal }}
+        {{ $data = . }}
+    {{ end }}
+{{ end }}
+mon data : {{ $data }}<br>
+{{ $page := .Page }}
+{{ $src := newScratch }}
+
+{{ range $data }}
+    {{ $srcstring := printf "galerie/%s" .src }}
+    {{ $srcM := $page.Resources.GetMatch $srcstring }}
+    {{ $src.Set "src" $srcM }}
+    ma srcM : {{$srcM}}
+    ma src : {{$src}}
+    {{ $src.Get "src"}}
+    ma src get : {{$src}}
+    {{$alt := .alt }}
+    {{ partial "srcsetInPageStore.html" . }}
+  
+   
+              
+{{end}}
+
+
+
+
