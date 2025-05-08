@@ -4,6 +4,8 @@
     "tailwindcss": "^3.4.17"
   },
   "dependencies": {
+    "@algolia/netlify-plugin-crawler": "^1.0.0",
+    "atomic-algolia": "^0.3.19",
     "flowbite": "^3.1.2"
   }
 }
