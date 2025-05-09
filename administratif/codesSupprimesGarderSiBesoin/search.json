@@ -1,0 +1,19 @@
+ON EST DANS _DEFAULT Search json
+{{ $.Store.Add "pagesIndex" slice }}
+{{ range $index, $page  := .Site.Pages }}
+    {{ if gt (len $page.Content) 0 }}
+        {{ $pageData := (dict
+            "title" $page.Title
+            "url" $page.Permalink
+            "content" $page.Content
+            "description" $page.Description
+            "keywords" $page.Keywords
+            "numero" $page.Params.numero
+            "content" ($page.Content | plainify)
+            "photo" $page.Params.photo 
+            "alt" $page.Params.alt
+        ) }}
+        {{ $.Store.Add "pagesIndex" $pageData }}
+    {{ end }}
+{{ end }}
+{{ $.Store.Get "pagesIndex" | jsonify }}

@@ -1,0 +1,24 @@
+ON EST DANS LE shortcode SEARCH HTML
+{{ $.Store.Add "pagesIndex" slice }}
+{{ range $index, $page  := .Site.Pages }}
+    {{ if gt (len $page.Content) 0 }}
+        {{ $pageData := (dict
+            "title" $page.Title
+            "url" $page.Permalink
+            "content" $page.Content
+            "description" $page.Description
+            "keywords" $page.Keywords
+            "numero" $page.Params.numero
+            "content" ($page.Content | plainify)
+            "photo" $page.Params.photo 
+            "alt" $page.Params.alt
+        ) }}
+        {{ $.Store.Add "pagesIndex" $pageData }}
+    {{ end }}
+{{ end }}
+{{ $documents := $.Store.Get "pagesIndex" | jsonify }}
+documents : {{ $documents }}
+
+
+<h3>TEST de SEARCH</h3>
+<p id="result"></p>

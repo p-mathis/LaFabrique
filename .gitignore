@@ -1,6 +1,1 @@
-/administratif
-/node_modules
-/public
-/.vscode
-/instantsearch-app
-.gitignore
+node_modules

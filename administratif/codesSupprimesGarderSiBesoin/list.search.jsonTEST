@@ -1,0 +1,7 @@
+{{ $data := slice  }}
+{{ range readDir "/resources/_gen/images/" }}
+    {{ $name := .Name }}
+    {{ $size := .Size }}
+    {{ $data = $data | append (slice (dict "name" ($name) "size" ($size)))}}
+{{ end }}
+{{ $data | jsonify }}

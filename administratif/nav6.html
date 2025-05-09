@@ -1,0 +1,47 @@
+
+<nav class="hidden md:flex bg-mycolor-300 border-4 border-mycolor-500" >
+  <div class="container mx-auto flex flex-wrap items-center justify-between">
+  <div class="group pl-1 md:pl-4 py-4 w-2/12   text-myblack text-base md:text-md lg:text-xl font-semibold uppercase  hover:text-myred hover:scale-110 ">
+    <div class=" text-center ">
+    <a class="no-underline" href="/"><span >{{ partial "logo.html" .}}</span><span class="" >Ma Fabrique</span> </a>
+    </div>
+  </div>
+  <div class="px-4 py-4 w-3/4 lg:w-4/5 flex flex-row space-x-24  text-lg lg:text-xl  align-middle h-16 text-center" >
+    {{ range .Site.Menus.main }}
+    <div class="hover:scale-110" x-data="{ open: false }"  @mouseleave="open = false">
+    <a  @mouseover="open = true" class="no-underline font-semibold bg-transparent text-gray-700 hover:text-myred  " href="{{ .URL }}" title="{{ .Title }}">
+      {{- .Name -}}
+      {{- if .HasChildren -}}
+      <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-75 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+      <div x-show="open" class="pt-5 pb-3  bg-mycolor-600 "  >
+        <ul class="list-none bg-transparent  border-t border-white pr-2 pl-2 text-mywhite  text-left">
+          {{ range .Children }}
+          <a class="no-underline bg-transparent hover:text-myred hover:italic" href="{{ .URL }}">
+            <li class="pt-2" >
+              <span>{{ .Name }}</span>
+            </li>   
+          </a>
+          {{ end }}
+        </ul>
+      </div>
+      {{- end -}}
+    </a>
+  </div>
+  {{ end }}       
+  </div>
+</div>
+</nav>
+
+<!-- pour les portables et sm -->
+<nav class="flex  md:hidden bg-mycolor-300 border-4 border-mycolor-500" >
+  <div class="container mx-auto flex flex-wrap items-center space-x-4  hover:text-myred">
+    
+      <div class=" w-12 h-12 ml-0">
+      <a class="no-underline" href="/">{{ partial "logo.html" . }}
+
+      </div>
+      <span class="pl-4 text-base font-bold " >Ma Fabrique</span> 
+  
+    </a>
+  </div>
+</nav>

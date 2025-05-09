@@ -1,0 +1,52 @@
+<!-- le html pour resize images Déclaration variables-->
+
+{{ $src := . }}
+{{ $alt := . }}
+
+{{ $respSizes := slice "320" "640" "960" "1280" "1600" "1920" }}
+{{ $divClass := "" }}
+{{ $imgClass := "w-full h-auto " }}
+{{ $dataSzes := "(min-width: 1024px) 100vw, 50vw" }}
+{{ $actualImg := $src.Resize "640x jpg" }}
+
+<!-- fin du html pour les images Déclaration variables-->
+
+<!-- Début html picture -->
+
+<!-- {{ $picture := '<picture class="w-full h-auto ">
+    <source
+        type="image/webp"
+        srcset="
+        {{- with $respSizes -}}
+            {{- range $i, $e := . -}}
+            {{- if ge $src.Width . -}}
+            {{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " webp") ).RelPermalink }} {{ . }}w
+            {{- end -}}
+        {{- end -}}
+        {{- end -}}"
+        sizes="{{ $dataSzes }}"
+    />
+    <source
+        type="image/jpeg"
+        srcset="
+        {{- with $respSizes -}}
+            {{- range $i, $e := . -}}
+            {{- if ge $src.Width . -}}
+                {{- if $i }}, {{ end -}}{{- ($src.Resize (printf "%sx%s" . " jpg") ).RelPermalink }} {{ . }}w
+            {{- end -}}
+        {{- end -}}
+        {{- end -}}"\
+        sizes="{{ $dataSzes }}"
+    />
+    <img class="{{ $imgClass }}"
+        src="{{ $actualImg.RelPermalink }}"
+        width="{{ $src.Width }}"
+        height="{{ $src.Height }}"
+        alt="{{ $alt }}"
+        loading="lazy"
+    />
+</picture>' }}
+
+{{ $picture | safeHTML }}   
+<!-- fin du html picture -->
+ {{ return $picture }} -->

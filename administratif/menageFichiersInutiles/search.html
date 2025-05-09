@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+SEARCH HTML DE _DEFAULT LAYOUTS
+
+{{ partial "search-form.html" . }}
+
+
+<div id="search-container" class="container">
+  <!-- This is where the search results will be displayed. Initialize as empty list. -->
+  <ul id="searchresults"></ul>
+</div>
+
+<!-- Include lunr.js library. This can be included from node_modules mounted as assets/vendor, refer to their cdn or directly use from static/js.  -->
+<script src="https://unpkg.com/lunr/lunr.js" defer></script>
+
+<!-- Include the custom search script where the magic happens. This can be used from assets/js like below, or directly from static/js. -->
+{{ with resources.Get "js/search.js" }}
+  {{ $minifiedScript := . | minify | fingerprint }}
+  <script src="{{ $minifiedScript.Permalink }}" integrity="{{ $minifiedScript.Data.Integrity }}" defer></script>
+{{ else }}
+  {{ errorf "search.js not found in assets/js/" }}
+{{ end }}
+{{ end }}

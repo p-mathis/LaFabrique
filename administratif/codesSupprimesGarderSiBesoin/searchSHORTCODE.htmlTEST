@@ -1,0 +1,44 @@
+ON EST DANS LE shortcode SEARCH HTML
+{{ $.Store.Add "pagesIndex" slice }}
+{{ range $index, $page  := .Site.Pages }}
+    {{ if gt (len $page.Content) 0 }}
+        {{ $pageData := (dict
+            "title" $page.Title
+            "url" $page.Permalink
+            "content" $page.Content
+            "description" $page.Description
+            "keywords" $page.Keywords
+            "numero" $page.Params.numero
+            "content" ($page.Content | plainify)
+            "photo" $page.Params.photo 
+            "alt" $page.Params.alt
+        ) }}
+        {{ $.Store.Add "pagesIndex" $pageData }}
+    {{ end }}
+{{ end }}
+{{ $documents := $.Store.Get "pagesIndex" | jsonify }}
+
+<script src="https://unpkg.com/lunr/lunr.js"></script>
+
+<script>
+    document.getElementById("result").innerHTML = myFunction();
+    function myFunction() {
+    var documents = {{ $documents | safeJS }};
+    var idx = lunr(function () {
+        this.ref('url');
+        this.field('title');
+        this.field('description');
+        this.field('keywords');
+        this.field('content');
+
+        documents.forEach(function (doc) {
+            this.add(doc);
+        }, this);
+    });
+    return idx.search("bassine"); 
+}
+</script>
+
+
+<h3>TEST de SEARCH</h3>
+<p id="result"></p>

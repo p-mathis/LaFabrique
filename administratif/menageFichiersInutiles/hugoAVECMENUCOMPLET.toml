@@ -1,0 +1,55 @@
+baseURL = 'https://lafabrique.netlify.app/'
+languageCode = 'fr-fr'
+title = 'Ma Fabrique'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menus]
+  [[menus.main]]
+    identifier = 'accueil'
+    name = 'Accueil'
+    pageRef = '/'
+    weight = 1
+  [[menus.main]]
+    identifier = 'histoire'  
+    name = 'Histoire'
+    pageRef = '/histoire'
+    weight = 10    
+
+  [[menus.main]]
+    identifier = 'produits'
+    name = 'Produits'
+    pageRef = '/produits'
+    weight = 20
+  [[menus.main]]
+    identifier = 'nettoyage'
+    name = 'Nettoyage'
+    parent = "produits"
+    pageRef = '/produits/nettoyage'
+    weight = 10  
+  [[menus.main]]
+    identifier = 'peinture'
+    name = 'Peinture'
+    parent = "produits"
+    pageRef = '/produits/peinture'
+    weight = 20  
+  [[menus.main]]
+    identifier = 'visserie'
+    name = 'Visserie'
+    parent = "produits"
+    pageRef = '/produits/visserie'
+    weight = 30  
+  [[menus.main]]
+    identifier = 'contact'
+    name = 'Contact'
+    pageRef = '/contact'
+    weight = 90 
+  [[menus.main]]
+    identifier = 'catalogue'
+    name = 'Catalogue'
+    pageRef = '/catalogue'
+    weight = 40
+    

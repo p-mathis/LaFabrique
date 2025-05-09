@@ -1,0 +1,44 @@
+donner dimension au logo  
+{{ $image := resources.Get "images/logo.jpg" }}
+{{ $image := $image.Process "resize 64x64" }}
+{{ $alt := "un dessin carré de la devanture d'une vieille droguerie, logo du site" }}
+
+créer balise <nav>
+utilisation de flex pas simple pour des problèmes de distance entre les éléments
+Passer par des colonnes
+
+La mettre en hidden md:flex flex-row bg-mycolor-300
+Ne pas mettre de ul, commencer directement le contenu
+ancre a avec l'image et sa source $image.RelPermalink et un alt
+
+Mettre le range : 
+{{ range .Site.Menus.main }}
+        <li class="">
+          <a class="" href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+
+puis au fur et à mesure tester :
+pour nav : 	space-x-8
+		list-none
+		items-center
+		text-xl
+		font-bold
+pour les <a> :	no-underline
+pour li 	hover:text-myred
+		hover:scale-110
+		
+Insérer ifhas children au bon endroit : voir https://gohugo.io/methods/menu-entry/children/
+      {{ if .HasChildren }}
+        <ul>
+          {{ range .Children }}
+            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      {{ end }}
+      
+Au  niveau de nav 	fixer la hauteur : h-16
+pour le ul de children:	list-none bg-transparent  border-t border-white pr-2 pl-2 text-mywhite  text-left
+pour le a de children :	no-underline	
+ajouter un svg juste sous if .HasChildren, avant ul :	
+	      <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-75 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>

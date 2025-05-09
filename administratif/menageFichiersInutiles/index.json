@@ -1,0 +1,12 @@
+{{- $index := slice -}}
+{{- range $.Site.RegularPages -}}
+    {{- $keywords := slice }}
+    {{- range .Params.keywords -}}
+        {{- $keywords = $keywords | append . }}
+    {{- end -}}
+    {{- $content := .Content | plainify | htmlUnescape }}
+    {{- $datestr := .Date.Format "Jan 2, 2006" }}
+    {{- $indexItem := dict "url" .Permalink "title" .Title "content" $content "keywords" $keywords "date" $datestr -}}
+    {{- $index = $index | append $indexItem }}
+{{- end -}}
+{{- $index | jsonify (dict "indent" " ") }}

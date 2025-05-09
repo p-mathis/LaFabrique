@@ -1,0 +1,25 @@
+<!-- Voir https://flowbite.com/docs/components/navbar#navbar-with-dropdown -->
+
+<nav class="bg-mycolor-300 border-mycolor-400 border-4 ">
+    <ul class="flex flex-row list-none text-3xl py-8 px-16 items-center justify-between">
+        
+        {{ range .Site.Menus.main }}
+          <li class="hover:scale-110">
+            <a class="no-underline hover:text-myred " href="{{ .URL }}">{{ .Name }}</a>
+            {{ if .HasChildren }}
+           <svg id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="w-2.5 h-2.5 inline" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+              </svg>
+              <!-- dropdown menu -->
+              <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44 dark:bg-gray-700 dark:divide-gray-600">
+              <ul class="list-none py-2 text-sm text-gray-700 dark:text-gray-400">
+                {{ range .Children }}
+                  <li class="no-underline"><a class="block" href="{{ .URL }}">{{ .Name }}</a></li>
+                {{ end }}
+              </ul>
+              </div>
+            {{ end }}
+          </li>
+        {{ end }}
+      </ul>
+</nav>

@@ -1,0 +1,16 @@
+
+{{- $index := slice -}}
+{{ range .Site.Pages  }}
+{{ $index = $index | append (dict 
+    "title" .Title
+    "url" .Permalink
+    "description" .Description
+    "keywords" {{ if .Params.Keywords }}{{ delimit .Params.Keywords ", " }}{{ end }}
+    "numero" .Params.numero
+    "content" (.Content | markdownify | plainify)
+    "photo" .Params.photo 
+    "alt" .Params.alt
+)}}
+{{ end }}
+{{- $index | jsonify -}}
+

@@ -1,0 +1,26 @@
+{{ $logo := resources.Get "images/logo.jpg" }}
+{{ $logo := $logo.Process "resize 64x64" }}
+{{ $alt := "un dessin carré de la devanture d'une vieille droguerie, logo du site" }}
+<!-- Menu pour md et plus -->
+<nav name="nav-md" class="hidden md:flex bg-mycolor-300 space-x-12 list-none text-xl font-bold items-center h-16" x-data="{ open: false }">
+
+    <a name="ancre-logo" class="" href="/"><img class="" src="{{ $logo.RelPermalink }}" alt="{{ $alt }}"></a>
+
+    {{ range .Site.Menus.main }}
+    <li name="li-parent" class="hover:scale-110">
+        <a name="a-parent" class="no-underline hover:text-myred" href="{{ .URL }}">{{ .Name }}</a>
+
+        {{ if .HasChildren }}
+        <svg @click="open = ! open" fill="currentColor" viewBox="0 0 20 20" class="inline w-4 h-4 "><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+
+        <ul name="ul-child" class="list-none overflow-y-auto" x-show="open">
+            {{ range .Children }}
+                <li name="li-child">
+                    <a name="a-child" class="no-underline" href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+            {{ end }}
+        </ul>
+        {{ end }}
+    </li>
+{{ end }}
+</nav> 

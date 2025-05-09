@@ -1,0 +1,13 @@
+<!-- Voir https://discourse.gohugo.io/t/reverse-array/28753 
+ Pour récupérer le $rayon d'un produit sans avoir à le mettre dans le front matter 
+ Dans le html appeler de la manière suivante
+ {{ $currentSection := .CurrentSection }}
+ {{ $rayon := partial "sliceSection.html"  $currentSection }}
+-->
+
+{{ $currentSection := .CurrentSection }}
+{{ $slice := split $currentSection "/" }}
+{{ $len := $slice | len }}
+{{ $index := math.Sub $len 2 }}
+{{ $result := index $slice $index }}
+{{ $result }}
