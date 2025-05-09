@@ -1,12 +1,12 @@
 const { algoliasearch, instantsearch } = window;
 
 const searchClient = algoliasearch(
-  '4QH8BJYPQS',
-  'd53ba25ce020da1d13b8472f596cc2ba'
+  'SUBMLTW9DF',
+  'dff25b3f9155d0fb38d37dd3f1ddb5f7'
 );
 
 const search = instantsearch({
-  indexName: 'lafabrique_netlify_app_4qh8bjypqs_pages',
+  indexName: 'lafabrique_netlify_app_submltw9df_pages',
   searchClient,
   future: { preserveSharedStateOnUnmount: true },
 });
