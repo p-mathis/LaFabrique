@@ -21,7 +21,15 @@
   <!-- algolia -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
     <script src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
-    <script src="{{ .Site.BaseURL}}/js/algoliaSearch.js"></script>
+    <script type="text/javascript">
+      algoliasearchNetlify({
+    appId: 'SUBMLTW9DF',
+    apiKey: 'dff25b3f9155d0fb38d37dd3f1ddb5f7',
+    siteId: '04edb816-e8fa-417d-a1c2-592a6efee563',
+    branch: 'main',
+    selector: 'div#search',
+    });
+    </script>
   <!-- fin algolia -->
 
   </head>
