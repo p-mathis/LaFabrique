@@ -71,3 +71,6 @@ isPlainText = true
 mediaType = "application/json"
 notAlternative = true
 
+[params.algolia]
+vars = ["title",  "summary", "date", "permalink"]
+params = ["categories", "tags", "description", "keywords"]
