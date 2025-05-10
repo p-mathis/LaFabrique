@@ -56,7 +56,7 @@ enableRobotsTXT = true
   
 
 [outputs]
-home = ["HTML", "RSS", "JSON"]
+home = ["HTML", "RSS", "JSON", "algolia"]
 [mediaTypes."application/json"]
   suffixes = ["json"]
 [outputFormats]  
@@ -64,4 +64,10 @@ home = ["HTML", "RSS", "JSON"]
     mediaType = "application/json"
     baseName = "index" 
     isPlainText = true
+
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
 
