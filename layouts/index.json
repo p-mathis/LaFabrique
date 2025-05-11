@@ -1,0 +1,15 @@
+{{ $.Store.Add "index" slice}}
+{{ range .Site.RegularPages }}
+    {{ $.Store.Add "index" (dict 
+        "title" .Title 
+        "url" .RelPermalink 
+        "href" .RelPermalink
+        "description" .Params.description
+        "keywords" .Params.keywords
+        "photo" .Params.photo
+        "alt" .Params.alt
+        "numero" .Params.numero
+        )
+    }}
+{{ end }}
+{{ $.Store.Get "index" | jsonify}}
