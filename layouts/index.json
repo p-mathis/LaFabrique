@@ -1,6 +1,10 @@
+
+ {{ $.Store.Set "i" 1 }}
+
 {{ $.Store.Add "index" slice}}
 {{ range .Site.RegularPages }}
     {{ $.Store.Add "index" (dict 
+        "id" (add ($.Store.Get "i") 1000)
         "title" .Title 
         "url" .RelPermalink 
         "href" .RelPermalink
@@ -11,5 +15,6 @@
         "numero" .Params.numero
         )
     }}
+    {{ $.Store.Add "i" 1}}
 {{ end }}
 {{ $.Store.Get "index" | jsonify}}
