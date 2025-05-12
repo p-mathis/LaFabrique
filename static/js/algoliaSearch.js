@@ -4,4 +4,4 @@ algoliasearchNetlify({
     siteId: '04edb816-e8fa-417d-a1c2-592a6efee563',
     branch: 'main',
     selector: 'div#search',
-    })
+    });
