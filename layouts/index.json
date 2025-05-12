@@ -1,7 +1,8 @@
 {{ $.Store.Set "i" 1001 }}
+{{ $slice := slice }}
 
-{{ $.Store.Add "index" slice}}
-{{ range .Site.RegularPages }}
+{{ $.Store.Set "index" $slice}}
+{{ range .Site.Pages }}
     {{ $.Store.Add "index" (dict 
         "id" ($.Store.Get "i")
         "title" .Title 

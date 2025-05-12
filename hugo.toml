@@ -3,6 +3,8 @@ languageCode = 'fr-fr'
 title = 'Ma Fabrique'
 enableRobotsTXT = true
 
+disableKinds = ["taxonomy"]
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
@@ -58,3 +60,4 @@ enableRobotsTXT = true
 [outputs]
 home = ["HTML", "RSS", "JSON"]
 page = ["HTML"]
+
