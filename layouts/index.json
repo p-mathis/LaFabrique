@@ -1,13 +1,11 @@
-
- {{ $.Store.Set "i" 1 }}
+{{ $.Store.Set "i" 1001 }}
 
 {{ $.Store.Add "index" slice}}
 {{ range .Site.RegularPages }}
     {{ $.Store.Add "index" (dict 
-        "id" (add ($.Store.Get "i") 1000)
+        "id" ($.Store.Get "i")
         "title" .Title 
         "url" .RelPermalink 
-        "href" .RelPermalink
         "description" .Params.description
         "keywords" .Params.keywords
         "photo" .Params.photo
