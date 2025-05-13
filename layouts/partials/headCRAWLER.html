@@ -21,14 +21,26 @@
   <!-- algolia -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
     <script src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
-    <script type="text/javascript" >algoliasearchNetlify({
-    appId: 'ZGLLKYKCQM',
-    apiKey: 'b5942bd76e329a4191d7d7ac0e7f7977',
+    <script type="text/javascript">
+      algoliasearchNetlify({
+    appId: '11ABALC4RP',
+    apiKey: '60656463346334d4cd9466b3dd925800',
     siteId: '04edb816-e8fa-417d-a1c2-592a6efee563',
     branch: 'main',
     selector: 'div#search',
     });
     </script>
   <!-- fin algolia -->
-   
+
+  <!-- fuse pour barre recherche -->
+   <!-- https://jimmysong.io/en/blog/hugo-instant-search-guide/ -->
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@xiee/utils/js/fuse-search.min.js" defer></script>
+
+  <!-- fin fuse -->
+
+<!-- lunr -->
+ <script src="{{ .Site.BaseURL}}/js/search.js"></script>
+ <!-- fin lunr -->
+
   </head>
