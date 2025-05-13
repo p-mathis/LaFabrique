@@ -61,3 +61,12 @@ disableKinds = ["taxonomy"]
 home = ["HTML", "RSS", "JSON"]
 page = ["HTML"]
 
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+
+[params.algolia]
+vars = ["title", "keywords", "description", "numero", "alt", "photo"]
+params = ["categories", "tags", "description"]
