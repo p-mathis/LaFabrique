@@ -1,2 +1,2 @@
 User-agent: *
-# Algolia-Crawler-Verif: C2263679B35E059D
+# Algolia-Crawler-Verif: B827A7352A9DBE9C
