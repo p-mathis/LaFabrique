@@ -4,11 +4,3 @@
 [context.deploy-preview.environment]
   	HUGO_VERSION = "0.145.0"
 
-[[plugins]]
-package = "@algolia/netlify-plugin-crawler"
-  [plugins.inputs]
-  branches = ['main']
-  disabled = true
-  pathPrefix = "/"
-  customDomain = "mafabrique.netlify.app"
-  renderJavaScript = true
