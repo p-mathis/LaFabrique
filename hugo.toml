@@ -61,4 +61,8 @@ disableKinds = ["taxonomy"]
 home = ["HTML", "RSS", "JSON"]
 page = ["HTML"]
 
-
+[params]
+[params.search_config]
+app_id = "A67EGS7SJR"
+api_key = "87e74b877c6c98e834cf79062cedff23"
+index = "tuto_index"
