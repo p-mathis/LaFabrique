@@ -1,1 +1,2 @@
 User-agent: *
+# Algolia-Crawler-Verif: 0B6DF25310910D27
