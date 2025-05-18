@@ -65,4 +65,4 @@ page = ["HTML"]
 [params.search_config]
 app_id = "ZA3JD7KT7V"
 api_key = "ed9f2fdf7051e3c48dd5dff4cdca32c3"
-index = "tuto_crawler_bis_pages"
+index = "crawlerNetlify_JSON"
