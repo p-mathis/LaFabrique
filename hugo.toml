@@ -63,6 +63,6 @@ page = ["HTML"]
 
 [params]
 [params.search_config]
-app_id = "ZA3JD7KT7V"
-api_key = "ed9f2fdf7051e3c48dd5dff4cdca32c3"
-index = "crawlerNetlify_JSON"
+app_id = "WW0V9HNC61"
+api_key = "f6740884d9eb73a2772b6f90abdeb924"
+index = "tuto_index"
