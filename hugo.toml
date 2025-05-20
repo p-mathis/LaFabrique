@@ -63,6 +63,6 @@ page = ["HTML"]
 
 [params]
 [params.search_config]
-app_id = "WW0V9HNC61"
-api_key = "f6740884d9eb73a2772b6f90abdeb924"
+app_id = "R7MSR08AFR"
+api_key = "94c2e871b33fdd7903f990c1c5c20246"
 index = "tuto_index"
