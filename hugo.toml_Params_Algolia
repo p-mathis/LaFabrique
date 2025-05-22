@@ -58,20 +58,11 @@ disableKinds = ["taxonomy"]
   
 
 [outputs]
-home = ["HTML", "RSS", "JSON", "Lunr"]
+home = ["HTML", "RSS", "JSON"]
 page = ["HTML"]
 
-[outputFormats.Lunr]
-baseName = "index"
-isPlainText = true
-mediaType = "application/json"
-notAlternative = true
-
 [params]
-  [params.search]
-    enable = true
-    type = "lunr"
-
-  [params.lunr]
-  vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
-  params = ["categories", "tags", "keywords"]
+[params.search_config]
+app_id = "R7MSR08AFR"
+api_key = "94c2e871b33fdd7903f990c1c5c20246"
+index = "tuto_index"

@@ -1,0 +1,128 @@
+[
+    {
+        "uri": "/./content/_index",
+        "title": "Accueil",
+        "content": "\n!-- titre et photo écran md et plus --\ndiv class=\"hidden md:grid grid-cols-5 font-bold text-center justify-center items-center bg-mycolor-700\"\n    div class=\"col-span-3\"\n        h1 class=\"text-mywhite \"MA QUINCAILLERIEbrbrspan class=\"italic md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl\"Au Vieux Caylus/span/h1\n    /div\n    div class=\"col-span-2\"\n        {{ images/srcsetInAssets src=\"quincaillerieCarre.jpg\" alt=\"la devanture de la quincaillerie au vieux caylus\" }}\n    /div        \n/div\n !-- titre et photo écran sm --\ndiv class=\"md:hidden bg-mycolor-700 font-bold text-white text-center \"\n    {{ images/srcsetInAssets src=\"quincaillerieRectangle.jpg\" alt=\"L'intérieur de la quincaillerie au vieux caylus\" }}\n    h1 class=\"py-4 text-xl text-mywhite\" style=\"letter-spacing: .3rem;\"Ma Quincailleriebrspan class=\"text-base italic\" style=\"letter-spacing: .15rem;\"Au Vieux Caylus/span/h1\n/div\n\n{{ text/lightViaDark }}\nLorem Ipsum\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nec velit a ante lacinia interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ac justo diam. Sed lorem enim, elementum at sodales ut, vulputate non nibh. In id magna non lacus cursus ornare in vestibulum neque. Curabitur congue viverra posuere. Mauris vitae dolor at ipsum dictum consectetur feugiat in turpis. Cras quis lacus pretium, rhoncus sem elementum, aliquam augue. Quisque suscipit congue nulla a commodo. In hac habitasse platea dictumst. Curabitur ullamcorper, est at bibendum facilisis, ligula ante aliquam tortor, quis aliquam nisl lacus eu sapien.\n{{ /text/lightViaDark }}\n{{ text/darkViaLight }}\n Ut a lacinia diam\nUt a lacinia diam, pellentesque dictum lorem. Nam tristique sit amet nunc nec ornare. Nulla tellus lacus, varius in massa eu, vestibulum ultricies est. Nulla sit amet leo odio. Pellentesque vestibulum libero sit amet fermentum condimentum. Nulla maximus dui ut mauris viverra, sit amet imperdiet arcu sagittis. Ut nec orci eros. Ut auctor dapibus ex in hendrerit.\n{{ /text/darkViaLight }}",
+        "tags": []
+    },
+    {
+        "uri": "/./content/catalogue/index",
+        "title": "Tous Nos Produits",
+        "content": "\nLorem ispsum !",
+        "tags": []
+    },
+    {
+        "uri": "/./content/contact/index",
+        "title": "Contact",
+        "content": "",
+        "tags": []
+    },
+    {
+        "uri": "/./content/histoire/index",
+        "title": "Notre Histoire !",
+        "content": "\n{{ typo/spaceLine }}\n{{ text/lightViaDark }}\nUne belle histoire !\nUne quincaillerie au long passé, qui vous propose :\ndes clous\ndes vis\nde la peinture\n{{ /text/lightViaDark }}\n{{ typo/spaceLine }}\n\n{{ text/darkViaLight }}\n Un lien internet\nConsultez la page histoire de la Quincaillerie\n{{ /text/darkViaLight }}\n{{ typo/spaceLine }}\n{{ images/srcsetInPage src=\"histoire-quincaillerie.jpg\" alt=\"l'intérieur d'une quincaillerie\" }}\n\nUne galerie\n{{ galerie/gallery json=\"galerie.json\" }}\n\n Vidéo YouTube\nbr\ndiv class=\"md:w-7/12 mx-auto\"\n{{ youtube m_m5FOEY0Hc }}\n/div\n",
+        "tags": []
+    },
+    {
+        "uri": "/./content/produits/_index",
+        "title": "Tous nos Produits",
+        "content": "\nh2 class=\"text-center text-myred\" Tous Nos Rayons !/h2\n",
+        "tags": []
+    },
+    {
+        "uri": "/./content/produits/nettoyage/_index",
+        "title": "nettoyage",
+        "content": "\n\n",
+        "tags": []
+    },
+    {
+        "uri": "/./content/produits/nettoyage/bassine",
+        "title": "Bassine",
+        "content": "\nNotre Produit\nPellentesque luctus lacus a pulvinar faucibus.\n\n Nos commentaires\nSuspendisse tempor sodales lacus vestibulum sollicitudin.  \nPellentesque euismod lorem commodo lacus venenatis, id aliquet justo ullamcorper. \n",
+        "tags": []
+    },
+    {
+        "uri": "/./content/produits/nettoyage/lingette",
+        "title": "Lingettes",
+        "content": "\nNotre Produit\nPellentesque auctor sed diam nec pretium. Morbi auctor risus quam, in ultrices urna rutrum nec. \n Nos commentaires\nCras pharetra et odio in faucibus. \n\nTest de diaporama\n{{ galerie/slider}}",
+        "tags": []
+    },
+    {
+        "uri": "/./content/produits/nettoyage/seau-10-litres",
+        "title": "Seau 10 Litres",
+        "content": "\nNotre Produit\nCurabitur congue scelerisque lacus at tempor. Duis vitae risus et velit maximus ullamcorper nec a sapien. Praesent fermentum ante ac placerat condimentum. Suspendisse potenti. \n Nos commentaires\nSuspendisse potenti. \nDuis posuere erat quis libero porta, ac euismod eros mollis.\nNulla facilisis nisl et lacus consequat, a auctor erat finibus.\nInterdum et malesuada fames ac ante ipsum primis in faucibus.\nPhasellus faucibus odio vel volutpat dapibus. \nUt dignissim nec turpis nec bibendum.  \nInteger vel libero dolor. Mauris vulputate metus quis justo efficitur condimentum. Donec placerat diam quis semper convallis.",
+        "tags": []
+    },
+    {
+        "uri": "/./content/produits/nettoyage/seau-5-litres",
+        "title": "seau 5 litres",
+        "content": "\nNotre Produit\nCras pharetra et odio in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed eu lacus nunc. Vestibulum posuere eu eros a semper. \n Nos commentaires\nSed efficitur, est vel vestibulum ullamcorper, leo ligula blandit turpis, ut dapibus elit elit quis diam. Sed suscipit, lorem ut mollis porttitor, orci libero euismod purus, quis pulvinar eros velit eget sem. Ut in viverra lacus. Vestibulum dictum vitae sapien id varius. Nullam ut urna sit amet neque aliquam cursus.",
+        "tags": []
+    },
+    {
+        "uri": "/./content/produits/peinture/_index",
+        "title": "Peinture",
+        "content": "",
+        "tags": []
+    },
+    {
+        "uri": "/./content/produits/peinture/peinture-acrylique",
+        "title": "Peinture acrylique",
+        "content": "\nNotre Produit\nCras pharetra et odio in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.  \nSed eu lacus nunc. \n\n Nos commentaires\nAliquam felis massa, ornare ac nisl !",
+        "tags": []
+    },
+    {
+        "uri": "/./content/produits/peinture/peinture-eau",
+        "title": "Peinture à l'eau",
+        "content": "\nNotre Produit\nNam ultrices auctor lectus at fermentum. \nMauris venenatis rutrum lacus, ac posuere nisi accumsan a. \nMauris quis nulla ac mauris tristique malesuada non a mi.\nDuis consequat posuere semper. \n\n Nos commentaires\nPraesent tempus et neque eget finibus.",
+        "tags": []
+    },
+    {
+        "uri": "/./content/produits/peinture/pinceau-plat",
+        "title": "Pinceau plat",
+        "content": "\nNotre Produit\nLorem ipsum dolor sit amet, consectetur adipiscing elit. \n Nos Commentaires\nAliquam at semper lectus. \nNulla hendrerit interdum augue, eu elementum sem accumsan vitae. \nPraesent mollis turpis at diam vehicula finibus. \nSed ex lectus, convallis id dictum quis, porttitor ac erat. \nPhasellus euismod nibh ut odio ullamcorper, at malesuada nunc ultricies. \nAliquam vitae ultrices nisi. Vivamus velit ex, fermentum eget sagittis et, iaculis eu lacus. \nPellentesque interdum pretium commodo.",
+        "tags": []
+    },
+    {
+        "uri": "/./content/produits/peinture/pinceau-rond",
+        "title": "Pinceau Rond",
+        "content": "\nNotre Produit\nAenean id vehicula \n Nos Commentaires\n Vestibulum vehicula",
+        "tags": []
+    },
+    {
+        "uri": "/./content/produits/visserie/_index",
+        "title": "Visserie",
+        "content": "",
+        "tags": []
+    },
+    {
+        "uri": "/./content/produits/visserie/clou-tete-homme",
+        "title": "Clou Tête d'Homme",
+        "content": "\nNotre Produit\nUt in eros porta, viverra est sit amet, commodo mi.  \nNunc in semper lorem. Etiam eu vestibulum elit.\n\n Nos Commentaires\nCurabitur vel vestibulum diam !",
+        "tags": []
+    },
+    {
+        "uri": "/./content/produits/visserie/clou",
+        "title": "Clou",
+        "content": "\nNotre Produit\nLorem ipsum dolor sit amet, consectetur adipiscing elit. In vehicula erat at erat rhoncus, vel iaculis est interdum. Donec eu pretium sapien. Orci varius natoque.\n Nos Commentaires\nLorem ipsum dolor sit amet, consectetur adipiscing elit. In vehicula erat at erat rhoncus, vel iaculis est interdum. Donec eu pretium sapien. Orci varius natoque.",
+        "tags": []
+    },
+    {
+        "uri": "/./content/produits/visserie/vis-bois",
+        "title": "Vis bois",
+        "content": "\nNotre Produit\nAliquam faucibus, neque sed consectetur rutrum\n Nos Commentaires\nDuis ac ipsum laoreet ligula aliquet sagittis.",
+        "tags": []
+    },
+    {
+        "uri": "/./content/produits/visserie/vis-metal",
+        "title": "Vis Métal",
+        "content": "\nDescription\nLorem ipsum dolor sit amet !\n Commentaire\nIn id diam quam !",
+        "tags": []
+    },
+    {
+        "uri": "/./content/produits/visserie/vis-perforante",
+        "title": "Vis perforante",
+        "content": "\nDescription\nSed vulputate leo ut sem interdum, et faucibus turpis finibus. Suspendisse potenti. Duis posuere erat quis libero porta, ac euismod eros mollis.\n Commentaire\nCurabitur congue scelerisque lacus at tempor. ",
+        "tags": []
+    }
+]

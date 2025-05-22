@@ -20,18 +20,6 @@
 
   <!-- algolia -->
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.css" />
-  <script src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"></script>
-
-  <script type="text/javascript">
-      algoliasearchNetlify({
-    appId: 'L0FOR6BRQ5',
-    apiKey: '16f5819dd78f6da87bc8a097ca576eb6',
-    siteId: '04edb816-e8fa-417d-a1c2-592a6efee563',
-    branch: 'main',
-    selector: 'div#search',
-    });
-    </script> 
   <!-- fin algolia -->
 
   <!-- fuse pour barre recherche -->
@@ -42,7 +30,9 @@
   <!-- fin fuse -->
 
 <!-- lunr -->
- <script src="{{ .Site.BaseURL}}/js/search.js"></script>
+ <!-- <script src="{{ .Site.BaseURL}}/js/search.js"></script> -->
+  <script src=" https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js "></script>
+  <script src="https://unpkg.com/lunr/lunr.js"></script>
  <!-- fin lunr -->
 
   </head>

@@ -8,7 +8,20 @@
       {{ partial "nav.html" .}}
     {{ end }}
 
-<div id="search"></div>
+<div id="search-results">Résultats</div>
+<div id="add_to_me">En attente de script : </div>
+<form id="search" role="search">
+  <input type="search" id="search-input">
+</form>
+<template id="template" hidden>
+  <article>
+    <h1 class="title">
+      <a class="href"></a>
+    </h1>
+    <div class="summary"></div>
+    <div class="tags"></div>
+  </article>
+</template>
 
 {{ block "main" . }}
     {{ end }}
@@ -16,5 +29,9 @@
     {{ block "footer" .}} 
       {{ partial "footer.html" .}}
     {{ end }}
+
+<!-- Script to load Lunr index and handle search -->
+<script src="{{ .Site.BaseURL}}/js/search.js"></script>
+
   </body>
 </html>
