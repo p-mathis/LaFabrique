@@ -4,3 +4,9 @@
 [context.deploy-preview.environment]
   	HUGO_VERSION = "0.145.0"
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type, Authorization"
