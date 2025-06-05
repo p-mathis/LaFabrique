@@ -6,7 +6,7 @@
     {{ $.Store.Add "index" (dict 
         "id" ($.Store.Get "i")
         "title" .Title 
-        "url" .RelPermalink 
+        "url" .Permalink
         "description" .Params.description
         "keywords" .Params.keywords
         "photo" .Params.photo
